@@ -1,1 +1,9 @@
 @import url(./reset.css);
+
+:root{
+    --bgcolor_green: #BAFF39;
+    --bgcolor_pink: #EF036C;
+    --bgcolor: #6E6E6E ;
+    --text-color: #ffff;
+    --bgcolor_main: #352f39;
+}

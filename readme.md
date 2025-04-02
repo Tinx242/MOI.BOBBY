@@ -1,4 +1,4 @@
-#   〽️​💻​ ​PORFOLIO DEVELOPPER ​💻​〽️​
+#   〽️​💻​ ​PORFOLIO DEVELOPER ​💻​〽️​
 
 ## USE LANGAGE
 
