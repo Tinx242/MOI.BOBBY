@@ -26,8 +26,8 @@ Bienvenue dans mon portfolio ! Je suis un étudiant passionné par le développe
 ## 📞 CONTACT
 
 Pour toute question ou collaboration, n'hésitez pas à me contacter :
-### ➡️ Email: [votre-email@example.com](mailto:marthin.likouanga@gmail.com)
-### ➡️ LinkedIn: [Votre Profil LinkedIn](https://www.linkedin.com/in/likouanga-clotaire-marthin-99b01b302/)
+### ➡️ Email: [marthin.likouanga@gmail.com](mailto:marthin.likouanga@gmail.com)
+### ➡️ LinkedIn: [likouanga-clotaire-marthin](https://www.linkedin.com/in/likouanga-clotaire-marthin-99b01b302/)
 
 ---
 
