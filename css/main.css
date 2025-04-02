@@ -7,3 +7,51 @@
     --text-color: #ffff;
     --bgcolor_main: #352f39;
 }
+
+header{
+    background-color: var(--bgcolor_pink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1{
+        
+        background-color: inherit;
+        line-height: 8.5rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 3em;
+        padding-left: 2rem;
+        text-shadow: 0 -1rem 0 #BAFF39;
+    }
+
+    nav ul{
+        display: flex;
+        align-items: center;
+    }
+    nav ul li *{
+        display: block;
+         color: var(--text-color);
+         text-align: center;
+         transition: all .8s ease-in-out;
+    }
+    nav ul li {
+        font-weight: bolder;
+        width: 15rem;
+        line-height: 8.5rem;
+        text-transform: uppercase;
+        font-size: 2.4rem;
+        
+    }
+    
+    
+    nav ul li:hover a{
+        text-shadow: 0 0 0.9rem #6E6E6E;
+
+        filter: drop-shadow(0 0 0.9rem #fff);
+        background-color: var(--bgcolor_green);
+        color: var(--bgcolor_pink);
+        
+    }
+    
+}
