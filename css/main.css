@@ -23,6 +23,7 @@ header{
         font-size: 3em;
         padding-left: 2rem;
         text-shadow: 0 -1rem 0 #BAFF39;
+        font-family: 'Anton';
     }
 
     nav ul{
@@ -33,7 +34,7 @@ header{
         display: block;
          color: var(--text-color);
          text-align: center;
-         transition: all .8s ease-in-out;
+         transition: all .6s ease-in-out;
     }
     nav ul li {
         font-weight: bolder;
@@ -41,7 +42,7 @@ header{
         line-height: 8.5rem;
         text-transform: uppercase;
         font-size: 2.4rem;
-        
+        font-family: Anton;
     }
     
     
@@ -55,3 +56,53 @@ header{
     }
     
 }
+
+main {
+     
+
+
+    max-width: 120rem;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: center repeat(3, 1fr);
+    gap: 1rem;
+    border: solid .1rem var(--bgcolor_green);
+    padding: 1rem;
+    box-shadow: 0 0 20px 4px #81cfc6;
+    border-radius: .4rem;
+    background: var(--bgcolor_main);
+
+      
+}
+
+ section{
+    h2 {
+        color: var(--text-color);    
+        text-align: center;          
+        margin-bottom: 2rem;         
+        font-weight: bolder;
+        text-transform: uppercase;
+        font-family: 'Anton';        
+        display: flex;               
+        justify-content: center;     
+        align-items: center;         
+        min-height: 6rem;            
+        background-color: var(--bgcolor_pink); 
+        }
+        
+
+    }
+
+    footer *{
+        text-align: center;
+        
+        
+    }
+    
+        
+
+
+
+
+
+
