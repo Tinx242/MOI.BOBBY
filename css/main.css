@@ -34,7 +34,7 @@ header{
         display: block;
          color: var(--text-color);
          text-align: center;
-         transition: all .6s ease-in-out;
+         transition: all .7s ease-in-out;
     }
     nav ul li {
         font-weight: bolder;
@@ -58,8 +58,6 @@ header{
 }
 
 main {
-     
-
 
     max-width: 120rem;
     margin: 5rem auto;
@@ -89,9 +87,29 @@ main {
         min-height: 6rem;            
         background-color: var(--bgcolor_pink); 
         }
+
         
 
     }
+
+    
+ section ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+            list-style-type: none;
+        }
+        
+        section ul li {
+            flex: 1;
+            margin: 0 1rem;
+        }
+        
+        section ul li figure {
+            text-align: center;
+        }
+        
 
     footer *{
         text-align: center;
