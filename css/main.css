@@ -9,6 +9,7 @@
 }
 
 header{
+    width: 100%;
     background-color: var(--bgcolor_pink);
     display: flex;
     justify-content: space-between;
@@ -19,18 +20,21 @@ header{
         line-height: 8.5rem;
         color: #fff;
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 700rem;
         font-size: 3em;
         padding-left: 2rem;
-        text-shadow: 0 -1rem 0 #BAFF39;
+        text-shadow: 0 -1rem 0 rgb(186, 255, 57);
         font-family: 'Anton';
     }
 
     nav ul{
+        
         display: flex;
         align-items: center;
     }
     nav ul li *{
+        
+        text-shadow: 0 0 0.9rem #6E6E6E;
         display: block;
          color: var(--text-color);
          text-align: center;
@@ -38,18 +42,17 @@ header{
     }
     nav ul li {
         font-weight: bolder;
-        width: 15rem;
+        width: 14rem;
         line-height: 8.5rem;
         text-transform: uppercase;
         font-size: 2.4rem;
-        font-family: Anton;
+        font-family: 'Anton';
     }
     
     
     nav ul li:hover a{
         text-shadow: 0 0 0.9rem #6E6E6E;
-
-        filter: drop-shadow(0 0 0.9rem #fff);
+        filter: drop-shadow(.7rem .4rem  rgba(0, 0, 0, 0.181));
         background-color: var(--bgcolor_green);
         color: var(--bgcolor_pink);
         
@@ -58,62 +61,97 @@ header{
 }
 
 main {
-
+    width: 90%;
+    margin: 0 auto;
     max-width: 120rem;
-    margin: 5rem auto;
     display: grid;
+    
     grid-template-columns: center repeat(3, 1fr);
     gap: 1rem;
-    border: solid .1rem var(--bgcolor_green);
-    padding: 1rem;
-    box-shadow: 0 0 20px 4px #81cfc6;
-    border-radius: .4rem;
+    border:  .2rem solid var(--bgcolor_green);
+    
+    box-shadow: .5rem .3rem 0 black;
+    
     background: var(--bgcolor_main);
 
       
 }
 
- section{
-    h2 {
+  
+h2 {
+        width: 60%;
+        margin: 2rem auto;
+        margin-top: 5rem ;
+            
         color: var(--text-color);    
-        text-align: center;          
-        margin-bottom: 2rem;         
+        text-align: center;               
         font-weight: bolder;
         text-transform: uppercase;
-        font-family: 'Anton';        
-        display: flex;               
-        justify-content: center;     
-        align-items: center;         
-        min-height: 6rem;            
-        background-color: var(--bgcolor_pink); 
-        }
+        font-family: 'Anton'; 
+        font-size: 4rem;       
 
+        border: .3rem solid black; 
+        box-shadow: .5rem .3rem 0 var(--bgcolor_green) ;        
+        background-color: var(--bgcolor_pink); 
+     }
+
+        
+
+    
+    section ul{
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding: 0;
+        
+    }
+    section li {
+        list-style: none;
+        height: 160px;
+        width: 160px;
+        position: relative;
+        
+    }
+
+    section li img {
+        border: .3rem solid var(--text-color);
+        box-shadow: .5rem .3rem 0 black;
+        
+    }
+
+    section figcaption{
+        font-family: 'Space Mono';
+        text-align: center;
+        color: var(--text-color);
+        background-color: var(--bgcolor_pink);
+        box-shadow: .5rem .3rem 0 var(--bgcolor_green) ;  
+        border:.3rem solid  black; 
         
 
     }
 
-    
- section ul {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            
-            list-style-type: none;
-        }
+    .number {
         
-        section ul li {
-            flex: 1;
-            margin: 0 1rem;
-        }
+        background-color: var(--text-color);
+        border-radius: 50rem;
+        width: 3rem;
+        font-family: 'Space Mono';
+        display: flex;
+        justify-content: center;
         
-        section ul li figure {
-            text-align: center;
-        }
+        color: var(--bgcolor);
+        border: .3rem solid black;
+        box-shadow: .5rem .3rem 0 black;
+        font-weight: bold;
+    }
+ 
         
 
     footer *{
         text-align: center;
-        
+        padding: 1rem;
+    background-color: var(--bgcolor);
+    color: var(--text-color);
         
     }
     
