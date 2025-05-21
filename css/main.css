@@ -14,6 +14,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: solid var(--bgcolor_green);
     h1{
         
         background-color: inherit;
@@ -68,11 +69,12 @@ main {
     
     grid-template-columns: center repeat(3, 1fr);
     gap: 1rem;
-    border:  .2rem solid var(--bgcolor_green);
+    border:  .4rem solid var(--bgcolor_green);
     
     box-shadow: .5rem .3rem 0 black;
     background: var(--bgcolor_main);
     padding: 2rem 0;
+    
 }
 
 
@@ -92,7 +94,11 @@ h2 {
         border: .3rem solid black; 
         box-shadow: .5rem .3rem 0 var(--bgcolor_green) ;        
         background-color: var(--bgcolor_pink); 
+        
      }
+     
+
+     
 
     section {
         width: 90%;
@@ -117,7 +123,7 @@ h2 {
     }
     figure {
         position: relative;
-        }
+    }
 
     figure img {
         width: 25rem;
@@ -128,19 +134,23 @@ h2 {
         background: #fff;
         border: 0.4rem solid #fff;
         box-shadow: 0 0 0 0.2rem black, .5rem .3rem 0 var(--bgcolor_main);
+        box-shadow: .4rem .6rem 0 black ;
+        transition: all .7s cubic-bezier(0.23, 1, 0.32, 1); /* Ajoute une transition fluide */
     }
 
-    figure:nth-child(1) img {
-        transform: rotate(-5deg);
+    
+    
+
+    .card1 img {
+        transform: rotate(-7deg);
     }
-    figure:nth-child(2) img {
-        transform: rotate(3deg);
+
+    .card2 img {
+        transform: rotate(1.9deg);
     }
-    figure:nth-child(3) img {
-        transform: rotate(-2deg);
-    }
-    figure:nth-child(4) img {
-        transform: rotate(4deg);
+
+    .card3 img {
+        transform: rotate(3.7deg);
     }
 
     figure figcaption{
@@ -149,13 +159,18 @@ h2 {
        text-align: center;
        color: var(--text-color);
        background-color: var(--bgcolor_pink);
-       box-shadow: .5rem .3rem 0 var(--bgcolor_green) ;  
+       box-shadow: none;
        border:.3rem solid  black; 
-       font-size: 2rem;
+       font-size: 1.7rem;
        padding: 1.2rem;
        z-index: 20;
        position: relative;
        right: -6rem; /* Décale légèrement à gauche */
+       transition: box-shadow 0.7s ease;
+    }
+
+    figure:hover figcaption {
+       box-shadow: 1rem 1rem 0 var(--bgcolor_green);
     }
 
     .number {
@@ -177,20 +192,81 @@ h2 {
         box-shadow: .5rem .3rem 0 black;
         font-weight: bold;
         z-index: 10; 
-        
-        }
+        transition: transform .7s ease;
+    }
 
+    figure:hover .number {
+        transform: scale(1.15) rotate(-10deg);
+    }
+    
+    figure:hover img,
+    figure:has(figcaption:hover) img,
+    figure:has(.number:hover) img {
+        box-shadow: 1rem 1rem 0 black;
+        transform: scale(1.05);
+    }
         
  
         
 
-    footer *{
+    footer {
+        
         text-align: center;
         padding: 1rem;
-    background-color: var(--bgcolor);
-    color: var(--text-color);
-        
+        margin: 1rem auto;
+        background-color: var(--bgcolor_main);
+        color: var(--text-color);
+        font-family: 'Space Mono';
+        width: fit-content;
+        display: block;
+        padding: 0.5rem 2rem;
+        margin: 1rem auto 0 auto;
+        position: relative;
+        transition: color 0.4s;
     }
+
+    footer::before {
+        content: "";
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        height: calc(100% - 1rem);
+        width: 16ch; 
+        background: var(--bgcolor);
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    footer span, footer p, footer strong, footer em {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        transition: color 0.4s;
+    }
+
+    footer .copyright, 
+    footer .copyright * {
+        color: var(--bgcolor_pink);
+        transition: color 0.4s;
+    }
+
+    footer:hover,
+    footer:hover span,
+    footer:hover p,
+    footer:hover strong,
+    footer:hover em {
+        color: var(--bgcolor_pink);
+    }
+
+    footer:hover .copyright,
+    footer:hover .copyright * {
+        color: var(--bgcolor);
+    }
+    
+        
+    
 
 
 
