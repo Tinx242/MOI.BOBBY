@@ -71,11 +71,10 @@ main {
     border:  .2rem solid var(--bgcolor_green);
     
     box-shadow: .5rem .3rem 0 black;
-    
     background: var(--bgcolor_main);
-
-      
+    padding: 2rem 0;
 }
+
 
   
 h2 {
@@ -95,55 +94,93 @@ h2 {
         background-color: var(--bgcolor_pink); 
      }
 
-        
-
-    
-    section ul{
+    section {
+        width: 90%;
+        margin: 0 auto;
         display: flex;
-        justify-content: space-around;
-        list-style: none;
-        padding: 0;
-        
+        align-items: stretch;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
     }
-    section li {
-        list-style: none;
-        height: 160px;
-        width: 160px;
+
+    section > * {
+        
+        padding: 2rem;
+        margin: 1rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1rem;
+        gap: 14rem;
+    }
+    figure {
         position: relative;
-        
+        }
+
+    figure img {
+        width: 25rem;
+        height: 34rem;
+        object-fit: cover;
+        display: block;
+        box-shadow: .5rem .3rem 0 var(--bgcolor_main);
+        background: #fff;
+        border: 0.4rem solid #fff;
+        box-shadow: 0 0 0 0.2rem black, .5rem .3rem 0 var(--bgcolor_main);
     }
 
-    section li img {
-        border: .3rem solid var(--text-color);
-        box-shadow: .5rem .3rem 0 black;
-        
+    figure:nth-child(1) img {
+        transform: rotate(-5deg);
+    }
+    figure:nth-child(2) img {
+        transform: rotate(3deg);
+    }
+    figure:nth-child(3) img {
+        transform: rotate(-2deg);
+    }
+    figure:nth-child(4) img {
+        transform: rotate(4deg);
     }
 
-    section figcaption{
-        font-family: 'Space Mono';
-        text-align: center;
-        color: var(--text-color);
-        background-color: var(--bgcolor_pink);
-        box-shadow: .5rem .3rem 0 var(--bgcolor_green) ;  
-        border:.3rem solid  black; 
-        
-
+    figure figcaption{
+       margin-top: -5rem;
+       font-family: 'Space Mono';
+       text-align: center;
+       color: var(--text-color);
+       background-color: var(--bgcolor_pink);
+       box-shadow: .5rem .3rem 0 var(--bgcolor_green) ;  
+       border:.3rem solid  black; 
+       font-size: 2rem;
+       padding: 1.2rem;
+       z-index: 20;
+       position: relative;
+       right: -6rem; /* Décale légèrement à gauche */
     }
 
     .number {
-        
         background-color: var(--text-color);
         border-radius: 50rem;
-        width: 3rem;
+        width: 5rem;
+        height: 5rem;
+        font-size: 2.5rem;
         font-family: 'Space Mono';
         display: flex;
         justify-content: center;
-        
+        align-items: center;
+        position: absolute;
+        top: -3rem;
+        right: -1rem;
+        left: auto;
         color: var(--bgcolor);
         border: .3rem solid black;
         box-shadow: .5rem .3rem 0 black;
         font-weight: bold;
-    }
+        z-index: 10; 
+        
+        }
+
+        
  
         
 
@@ -154,8 +191,8 @@ h2 {
     color: var(--text-color);
         
     }
-    
-        
+
+
 
 
 
