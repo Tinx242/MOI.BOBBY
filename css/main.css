@@ -135,11 +135,9 @@ h2 {
         border: 0.4rem solid #fff;
         box-shadow: 0 0 0 0.2rem black, .5rem .3rem 0 var(--bgcolor_main);
         box-shadow: .4rem .6rem 0 black ;
-        transition: all .7s cubic-bezier(0.23, 1, 0.32, 1); /* Ajoute une transition fluide */
+        transition: all .7s cubic-bezier(0.23, 1, 0.32, 1); 
     }
 
-    
-    
 
     .card1 img {
         transform: rotate(-7deg);
@@ -165,7 +163,7 @@ h2 {
        padding: 1.2rem;
        z-index: 20;
        position: relative;
-       right: -6rem; /* Décale légèrement à gauche */
+       right: -6rem;
        transition: box-shadow 0.7s ease;
     }
 
