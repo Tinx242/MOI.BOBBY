@@ -317,13 +317,13 @@ h2 {
             padding: 1rem;
         }
         section li .card1{
-        margin: 0 29rem 0 0;
+        margin: 0 21rem 0 0;
         }
         section li .card2 {
-        margin: -30rem -14rem 0 0;
+        margin: -30rem 0 0 20rem;
         }
         section li .card3 {
-        margin:  -13rem 0 0 -9rem;
+        margin:  -13rem 0 0 0;
         }
         section li.card2 figure figcaption {
             right: -1rem;
