@@ -77,7 +77,9 @@ main {
     
 }
 
-
+section h1{
+    display: none;
+}
   
 h2 {
         width: 60%;
@@ -108,7 +110,7 @@ h2 {
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 2rem;
+        
     }
 
     section > * {
@@ -246,8 +248,8 @@ h2 {
 
     footer .copyright, 
     footer .copyright * {
-        color: var(--bgcolor_pink);
-        transition: color 0.4s;
+    color: var(--bgcolor_pink);
+    transition: color 0.4s;
     }
 
     footer:hover,
@@ -255,12 +257,12 @@ h2 {
     footer:hover p,
     footer:hover strong,
     footer:hover em {
-        color: var(--bgcolor_pink);
+    color: var(--bgcolor_pink);
     }
 
     footer:hover .copyright,
     footer:hover .copyright * {
-        color: var(--bgcolor);
+    color: var(--bgcolor);
     }
 
     @media (max-width: 700px) {
@@ -288,51 +290,57 @@ h2 {
         header nav ul li {
             font-size: 1.8rem;
         }
+        section h1{
+            display: block;
+            width: 80%;
+            margin: 2rem auto;
+            text-align: center;
+            font-size: 2.5rem;
+            text-shadow: 0 -1rem 0 rgb(186, 255, 57);
+            font-family: 'Anton';
+            color: var(--bgcolor_pink);
+            text-transform: uppercase;
+            background-color:inherit ;
+        }
         h2{
             font-size: 2rem;
             width: 80%;
+            
             margin: 2rem auto;
             margin-top: 2rem ;
         }
 
-        main {
-    
-        padding: 0 0rem 4rem 0;
-        }
         section > * {
             width: 30%;
-            flex-direction: unset;
-            align-items: center;
-            gap: 0;
+            flex-direction: column;
+            gap: 1.5rem;
             padding: 1rem;
         }
         section li .card1{
-            margin-bottom: 60px;
-            margin-right: -15px;
-            margin-top: -30px;
-            margin-left: -3px;
+        margin: 0 20rem 0 0;
         }
         section li .card2 {
-            margin-bottom: 60px;
-            margin-left: 68px;
-            margin-right: 8px;
-            margin-top: -40px;
+        margin: -23rem -14.5rem 0 0;
         }
         section li .card3 {
-            margin-right: 90px;
-            margin-top: 112px;
-            margin-left: -178px;
-            margin-bottom: -46px;
+        margin:  0 0 0 -3rem;
+        }
+        section li.card2 figure figcaption {
+            right: -1rem;
+        }
+        section li.card1 figure figcaption {
+            right: -1.6rem;
         }
         figure img {
-            width: 13rem;
-            height: 15rem;
+            width: 14rem;
+            height: 20rem;
         }
         figure figcaption {
             margin-top: -2rem;
             font-size: 1rem;
             padding: 0.6rem;
             right: -2rem;
+            
         }
         .number {
             width: 2.5rem;
@@ -348,6 +356,43 @@ h2 {
             margin: 1rem auto 0 auto;
         }
     }
+
+    @media screen and (orientation: landscape) and (max-width: 1000px) {
+
+
+        figure img {
+        width: 16rem;
+        height: 24rem;
+        object-fit: cover;
+        display: block;
+        
+    }
+    figure figcaption {
+        margin-top: -3rem;
+        font-size: 1.2rem;
+        padding: 0.8rem;
+        right: -3rem;
+
+    
+    }
+}
+    @media screen and (orientation: portrait) and (max-width: 1000px) {
+        figure img {
+        width: 14rem;
+        height: 20rem;
+        object-fit: cover;
+        display: block;
+        
+    }
+    figure figcaption {
+        margin-top: -2rem;
+        font-size: 1rem;
+        padding: 0.6rem;
+        right: -2rem;
+
+    
+    }
+    
 
     
 
