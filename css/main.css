@@ -65,7 +65,7 @@ header{
 }
 .toggle-dark-mode {
    
-    width: 10%;
+    width: 20%;
     padding: 1rem 3rem;
     background: var(--bgcolor_green);
     border: none;
