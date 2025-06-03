@@ -8,6 +8,9 @@
     --bgcolor_main: #352f39;
 }
 
+
+
+
 header{
     width: 100%;
     background-color: var(--bgcolor_pink);
@@ -60,6 +63,18 @@ header{
     }
     
 }
+.toggle-dark-mode {
+   
+    width: 10%;
+    padding: 1rem 3rem;
+    background: var(--bgcolor_green);
+    border: none;
+    border-radius: 2rem;
+    font-size: 2rem;
+    
+}
+
+
 
 main {
     width: 90%;
@@ -97,7 +112,8 @@ h2 {
         box-shadow: .5rem .3rem 0 var(--bgcolor_green) ;        
         background-color: var(--bgcolor_pink); 
         
-     }
+    }
+     
      
 
      
@@ -299,7 +315,7 @@ h2 {
             font-size: 2.5rem;
             text-shadow: 0 -1rem 0 rgb(186, 255, 57);
             font-family: 'Anton';
-            color: var(--bgcolor_pink);
+            color: var(--text-color);
             text-transform: uppercase;
             background-color:inherit ;
         }
@@ -404,7 +420,7 @@ h2 {
 }
     
 
-    
+
 
 
 

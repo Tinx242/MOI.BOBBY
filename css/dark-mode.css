@@ -1,0 +1,66 @@
+body.mode-light {
+    background-color: var(--bgcolor);
+    color: var(--text-color);
+    transition: background 0.4s, color 0.4s;
+}
+
+body.mode-dark {
+    background-color: var(--bgcolor_main);
+    color: var(--bgcolor_green);
+    transition: background 0.4s, color 0.4s;
+}
+
+
+body.mode-dark header {
+    background: var(--bgcolor);
+    border-bottom: solid var(--bgcolor_green);
+
+    nav ul li * {
+        color: black;
+    }
+
+    nav ul li:hover a {
+        background-color: var(--bgcolor_pink);
+        color: var(--bgcolor_green);
+    }
+
+}
+body.mode-dark h2{
+    color: black;
+    border: .3rem solid var(--bgcolor); 
+    box-shadow: .5rem .3rem 0 var(--bgcolor_pink) ;        
+    background-color: var(--bgcolor_green);
+}
+
+body.mode-dark .toggle-dark-mode {
+    background: var(--bgcolor_green);
+    color: var(--bgcolor_pink);
+    border-color: var(--bgcolor_pink);
+    
+}
+
+body.mode-dark main {
+    border: .4rem solid var(--bgcolor_pink);
+    background: var(--bgcolor);
+}
+body.mode-dark figure figcaption {
+    background-color: var(--bgcolor_green);
+    border: var(--text-color) solid .3rem;
+    color: black;    
+}
+body.mode-dark figure:hover figcaption {
+    box-shadow: .6rem .6rem 0 var(--bgcolor_pink);
+}
+body.mode-dark .number{
+    color: black;
+    
+}
+body.mode-dark footer {
+    background: var(--bgcolor);
+    color: var(--text-color);
+    
+}
+body.mode-dark footer::before {
+    background: var(--bgcolor_main);
+   
+}
