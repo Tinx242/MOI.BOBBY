@@ -55,7 +55,7 @@ header{
     
     
     nav ul li:hover a{
-        text-shadow: 0 0 0.9rem #6E6E6E;
+        text-shadow: 0 0 0.8rem #6E6E6E;
         filter: drop-shadow(.7rem .4rem  rgba(0, 0, 0, 0.181));
         background-color: var(--bgcolor_green);
         color: var(--bgcolor_pink);
