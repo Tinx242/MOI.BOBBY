@@ -1,3 +1,4 @@
+@import url(./main.css);
 body.mode-light {
     background-color: var(--bgcolor);
     color: var(--text-color);
@@ -19,12 +20,8 @@ body.mode-dark header {
         color: black;
     }
 
-    nav ul li:hover a {
-        background-color: var(--bgcolor_pink);
-        color: var(--bgcolor_green);
-    }
-
 }
+
 body.mode-dark h2{
     color: black;
     border: .3rem solid var(--bgcolor); 

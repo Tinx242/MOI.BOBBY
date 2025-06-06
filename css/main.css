@@ -73,6 +73,10 @@ header{
     font-size: 2rem;
     
 }
+body.mode-dark nav ul li:hover a {
+        background-color: var(--bgcolor_main);
+        color: var(--bgcolor_green);
+    }
 
 
 
@@ -149,8 +153,8 @@ h2 {
         object-fit: cover;
         display: block;
         box-shadow: .5rem .3rem 0 var(--bgcolor_main);
-        background: #fff;
-        border: 0.4rem solid #fff;
+        background: var(--text-color);
+        border: 0.4rem solid var(--text-color);
         box-shadow: 0 0 0 0.2rem black, .5rem .3rem 0 var(--bgcolor_main);
         box-shadow: .4rem .6rem 0 black ;
         transition: all .7s cubic-bezier(0.23, 1, 0.32, 1); 
