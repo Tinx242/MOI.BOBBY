@@ -1,31 +1,34 @@
-
-
-
-
-
 function triggerCardButton(cardFigure) {
-    const btn = cardFigure.querySelector('button, .card-btn');
-    if (btn) btn.click();
+    // Cherche un lien dans le figcaption
+    const captionLink = cardFigure.querySelector('figcaption a[href]');
+    if (captionLink) {
+        window.open(captionLink.href, captionLink.target === '_blank' ? '_blank' : '_self');
+        return;
+    }
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('figure').forEach(figure => {
+        // Rends toute la card cliquable
+        figure.style.cursor = 'pointer';
+        figure.addEventListener('click', (e) => {
+            // Évite double clic si on clique déjà sur le bouton/lien
+            if (
+                e.target.closest('figcaption a[href]') ||  
+                e.target.closest('.card-btn')
+            ) {
+                return;
+            }
+            triggerCardButton(figure);
+        });
+
+        // Optionnel : curseur pointer sur les éléments internes
         const img = figure.querySelector('img');
-        if (img) {
-            img.style.cursor = 'pointer';
-            img.addEventListener('click', () => triggerCardButton(figure));
-        }
+        if (img) img.style.cursor = 'pointer';
         const number = figure.querySelector('.number');
-        if (number) {
-            number.style.cursor = 'pointer';
-            number.addEventListener('click', () => triggerCardButton(figure));
-        }
+        if (number) number.style.cursor = 'pointer';
         const caption = figure.querySelector('figcaption');
-        if (caption) {
-            caption.style.cursor = 'pointer';
-            caption.addEventListener('click', () => triggerCardButton(figure));
-        }
+        if (caption) caption.style.cursor = 'pointer';
     });
 });
 
