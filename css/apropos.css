@@ -598,10 +598,6 @@ footer::before {
             margin: 1rem auto 0 auto;
         }
 
-        .tabs *{
-            
-        }
-
         .tabs__menu, .tabs__menu a{
         display: block;
     }

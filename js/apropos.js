@@ -1,5 +1,4 @@
 function triggerCardButton(cardFigure) {
-    // Cherche un lien dans le figcaption
     const captionLink = cardFigure.querySelector('figcaption a[href]');
     if (captionLink) {
         window.open(captionLink.href, captionLink.target === '_blank' ? '_blank' : '_self');
@@ -9,10 +8,8 @@ function triggerCardButton(cardFigure) {
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('figure').forEach(figure => {
-        // Rends toute la card cliquable
         figure.style.cursor = 'pointer';
         figure.addEventListener('click', (e) => {
-            // Évite double clic si on clique déjà sur le bouton/lien
             if (
                 e.target.closest('figcaption a[href]') ||  
                 e.target.closest('.card-btn')
@@ -22,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
             triggerCardButton(figure);
         });
 
-        // Optionnel : curseur pointer sur les éléments internes
         const img = figure.querySelector('img');
         if (img) img.style.cursor = 'pointer';
         const number = figure.querySelector('.number');
@@ -60,12 +56,9 @@ function tabs(){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // ... ton code existant ...
-
-    // Confettis sur le bouton "Télécharger mon CV"
+    
     document.querySelectorAll('.download-cv-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
-            // Laisse le téléchargement se faire, mais lance les confettis
             confetti({
                 particleCount: 120,
                 spread: 90,
