@@ -33,12 +33,43 @@
     <main>
         <h2>Projet_perso</h2>
 
-        <div class="coming-soon-panel">
-            <img src="./asset/comingsoon.png" alt="Coming Soon" class="comingsoon-img">
-            <p class="coming-soon-desc">Cette page sera mise à jour bientôt !</p>
+        <div class="projects-scroll">
+            <!-- Projet 1 -->
+            <div class="project-card"
+                 data-img="./asset/Moi.dessin1.jpg"
+                 data-desc="Application moderne réalisée avec VisualStudio Code."
+                 data-tech="HTML,CSS,JavaScript"
+                 data-link="https://tinx242.github.io/Moi.Dessin/">
+                <img src="./asset/Moi.dessin1.jpg" alt="MOI.DESSIN" class="project-img">
+                <div class="project-info">
+                    <h3>Moi.Dessin</h3>
+                    <p>Gallerie web interactive en HTML, CSS et JavaScript.</p>
+                </div>
+            </div>
+            <!-- Projet 2 -->
+            <div class="project-card"
+                 data-img="./asset/M.png"
+                 data-desc="Application moderne réalisée sans code avec Glide. Permet la création rapide d'applications mobiles personnalisées, intégration de bases de données, automatisation de processus et interface utilisateur intuitive. Idéale pour prototyper et déployer des solutions digitales sans compétences en développement traditionnel."
+                 data-tech="glide.js"
+                 data-link="https://moimarthin-qvkw.glide.page">
+                <img src="./asset/M.png" alt="Moi.Marthin" class="project-img">
+                <div class="project-info">
+                    <h3>Moi.Marthin</h3>
+                    <p>Application moderne en no-code .</p>
+                </div>
+            </div>
         </div>
-        
-            
+
+        <!-- Modal pour l'image, la description détaillée, les technos et le bouton -->
+        <div class="modal" id="project-modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <img src="./asset/M.png" alt="M" id="modal-img">
+                <div class="modal-desc" id="modal-desc"></div>
+                <div class="modal-techs" id="modal-techs"></div>
+                <a href="#" target="_blank" id="modal-link" class="modal-link-btn">Voir le projet</a>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -47,8 +78,8 @@
              &copy; - Porfolio  <time datetime="2025">2025</time>
         </p>
     </footer>
-    <script type="module" src="./js/contacts.js"></script>
     <script type="module" src="./js/dark-mode.js"></script>
+    <script type="module" src="./js/menu.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

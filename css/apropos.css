@@ -87,8 +87,8 @@ body.mode-dark section h1{
 
     main {
         width: 90%;
+        height: 57rem;
         margin: 3rem auto 0 auto; 
-        padding-top: 2rem;
         max-width: 120rem;
         display: grid;
         grid-template-columns: center repeat(3, 1fr);

@@ -30,12 +30,62 @@
         </nav>
     </header>
 
+     <section>
+        <h1>
+            MOI.BOBBY
+        </h1>
+    </section>
+
     <main>
         <h2>Développement</h2>
+        <div class="projects-scroll">
+            <!-- Projet 1 -->
+            <div class="project-card"
+                 data-img="./asset/Dev.jpg"
+                 data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                 data-tech="HTML,CSS,JavaScript"
+                 data-link="">
+                <img src="./asset/Dev.jpg" alt="Projet 1" class="project-img">
+                <div class="project-info">
+                    <h3>Moi.Dessin</h3>
+                    <p>Gallerie web interactive en HTML, CSS et JavaScript.</p>
+                </div>
+            </div>
+            <!-- Projet 2 -->
+            <div class="project-card"
+                 data-img="./asset/Reseau.png"
+                 data-desc="Application backend en Java avec Spring. API REST, gestion des utilisateurs et sécurité intégrée."
+                 data-tech="Java,Spring"
+                 data-link="https://monsite-projet2.com">
+                <img src="./asset/Reseau.png" alt="Projet 2" class="project-img">
+                <div class="project-info">
+                    <h3>Projet 2</h3>
+                    <p>Application backend Java/Spring sécurisée.</p>
+                </div>
+            </div>
+            <!-- Projet 3 -->
+            <div class="project-card"
+                 data-img="./asset/Projet_perso.jpg"
+                 data-desc="Application web réalisée avec Python et Django. Authentification, base de données et interface admin."
+                 data-tech="Python,Django"
+                 data-link="">
+                <img src="./asset/Projet_perso.jpg" alt="Projet 3" class="project-img">
+                <div class="project-info">
+                    <h3>Projet 3</h3>
+                    <p>Application web Python/Django avec base de données.</p>
+                </div>
+            </div>
+        </div>
 
-        <div class="coming-soon-panel">
-            <img src="./asset/comingsoon.png" alt="Coming Soon" class="comingsoon-img">
-            <p class="coming-soon-desc">Cette page sera mise à jour bientôt !</p>
+        <!-- Modal pour l'image, la description détaillée, les technos et le bouton -->
+        <div class="modal" id="project-modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <img src="./asset/M.png" alt="M" id="modal-img">
+                <div class="modal-desc" id="modal-desc"></div>
+                <div class="modal-techs" id="modal-techs"></div>
+                <a href="#" target="_blank" id="modal-link" class="modal-link-btn">Voir le projet</a>
+            </div>
         </div>
     </main>
 
@@ -46,6 +96,7 @@
         </p>
     </footer>
     <script type="module" src="./js/dark-mode.js"></script>
+    <script type="module" src="./js/menu.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

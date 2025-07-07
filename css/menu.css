@@ -78,7 +78,9 @@ body.mode-dark nav ul li:hover a {
         color: var(--bgcolor_green);
     }
 
-
+section h1{
+    display: none;
+}
 
  main {
         width: 90%;
@@ -110,6 +112,7 @@ body.mode-dark nav ul li:hover a {
         background-color: var(--bgcolor_pink); 
         
     }
+    
 }
 body.mode-dark main {
         width: 90%;
@@ -125,6 +128,194 @@ body.mode-dark main {
         padding: 2rem 0;
     }
 
+    .projects-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width:thin  ;
+}
+
+.project-card {
+    min-width: 320px;
+    max-width: 340px;
+    background: var(--bgcolor);
+    border: .2rem solid var(--bgcolor_green);
+    
+    box-shadow: 0 2px 16px #0003;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    scroll-snap-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+    
+}
+body.mode-dark .project-card {
+    background: var(--bgcolor_main);
+    border: .2rem solid var(--bgcolor_pink);
+    
+}
+.project-card:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.22), .5rem .4rem 0 var(--bgcolor_green);
+    z-index: 2;
+}
+body.mode-dark .project-card:hover {
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.22), .5rem .4rem 0 var(--bgcolor_pink);
+}
+
+.project-img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    box-shadow: 0 0.2rem 1.2rem #0002;
+    transition: filter 0.3s;
+    display: block;
+    
+}
+
+.project-info {
+    padding: 1.2rem 1rem 1.5rem 1rem;
+    text-align: center;
+    width: 100%;
+}
+.project-info h3 {
+    color: var(--bgcolor_pink);
+    font-family: 'Anton', sans-serif;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+}
+body.mode-dark .project-info h3 {
+    color: var(--bgcolor_green);
+}
+.project-info p {
+    color: var(--text-color, #fff);
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.modal-content {
+    background: var(--bgcolor);
+    padding: 2.5rem 2rem 2rem 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 0 40px #000a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 95vw;
+    max-height: 95vh;
+    animation: popIn 0.25s;
+}
+body.mode-dark .modal-content {
+    background: var(--bgcolor_main);
+    box-shadow: 0 0 40px #000a;
+}
+@keyframes popIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+.modal-close {
+    position: absolute;
+    top: 1.2rem; right: 1.5rem;
+    font-size: 2.2rem;
+    color: var(--bgcolor_pink, #EF036C);
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+    z-index: 2;
+}
+.modal-close:hover {
+    color: var(--bgcolor_green, #BAFF39);
+}
+#modal-img {
+    width: 100%;
+    max-width: 50rem;
+    height: 28rem;
+    max-height: 60vh;
+    border-radius: 0.7rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 0 2.4rem #0007;
+    object-fit: cover;
+    background: #fff;
+    display: block;
+}
+
+@media (max-width: 700px) {
+    #modal-img {
+        max-width: 98vw;
+        height: 14rem;
+        max-height: 30vh;
+    }
+}
+.modal-desc {
+    color: var(--text-color, #fff);
+    font-family: 'Space Mono', monospace;
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.5;
+}
+.modal-techs {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+.modal-techs img {
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    box-shadow: 0 2px 8px #0003;
+    transition: transform 0.2s;
+}
+.modal-techs img:hover {
+    transform: scale(1.15) rotate(-7deg);
+}
+.modal-link-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.7rem 2rem;
+    background: var(--bgcolor_green, #BAFF39);
+    color: var(--bgcolor_main, #232323);
+    font-family: 'Anton', sans-serif;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 8px #0002;
+    transition: background 0.3s, color 0.3s;
+}
+.modal-link-btn:hover {
+    background: var(--bgcolor_pink, #EF036C);
+    color: #fff;
+}
 
 
 
@@ -207,4 +398,87 @@ footer {
 body.mode-dark .coming-soon-desc {
         color: var(--bgcolor_green);
     }
-    
+
+
+
+@media (max-width: 700px) {
+    .project-img {
+        height: 10rem;
+    }
+    header h1 {
+            display: none;
+        }
+        section h1{
+            display: block;
+            width: 80%;
+            margin: 2rem auto;
+            text-align: center;
+            font-size: 2.5rem;
+            text-shadow: 0 -1rem 0 rgb(186, 255, 57);
+            font-family: 'Anton';
+            color: var(--text-color);
+            text-transform: uppercase;
+            background-color:inherit ;
+        }
+        h2{
+            font-size: 2rem;
+            width: 80%;
+            
+            margin: 2rem auto;
+            margin-top: 2rem ;
+        }
+         header {
+            
+            justify-content: center;
+            width: 100vw;
+            min-width: 100vw;
+            max-width: 100vw;
+            left: 0;
+            right: 0;
+            position: relative;
+        }
+        header nav {
+            width: auto;
+            min-width: 0;
+            max-width: 90vw;
+            margin: 1rem auto;
+            
+        }
+        main{
+            h2{
+            font-size: 2rem;
+            width: 80%;
+            
+            margin: 2rem auto;
+            margin-top: 2rem ;
+        }
+        }
+        
+
+}
+
+
+
+@media (max-width: 700px) {
+    .modal-content {
+        padding: 1rem;
+    }
+    #modal-img {
+        max-width: 98vw;
+        max-height: 13rem;
+    }
+    .modal-desc {
+        font-size: 1rem;
+    }
+    .modal-techs img {
+        width: 32px;
+        height: 32px;
+    }
+    .project-card {
+        min-width: 220px;
+        max-width: 90vw;
+    }
+    .project-img {
+        height: 7rem;
+    }
+}
