@@ -14,7 +14,7 @@ const techLogos = {
     Unity: './asset/unity.svg',
     Glide: './asset/glide.svg',
     "glide.js": './asset/glide.svg',
-    // Ajoute d'autres si besoin
+    Gns3: './asset/gns3.png',
 };
 
 document.addEventListener('DOMContentLoaded', () => {
