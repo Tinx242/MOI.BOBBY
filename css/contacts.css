@@ -78,7 +78,9 @@ body.mode-dark nav ul li:hover a {
         color: var(--bgcolor_green);
     }
 
-
+.logo{
+    display: none;
+}
 
  main {
         width: 90%;
@@ -181,6 +183,7 @@ section {
 }
 
 .contact-info a {
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -304,3 +307,81 @@ body.mode-dark .contact-info a:focus ion-icon {
     color: var(--bgcolor);
     }
 
+@media (max-width: 700px) {
+    
+    header h1 {
+            display: none;
+        }
+        .logo{
+            display: block;
+            width: 80%;
+            margin: 2rem auto;
+            text-align: center;
+            font-size: 1.5rem;
+            text-shadow: 0 -1rem 0 rgb(186, 255, 57);
+            font-family: 'Anton';
+            color: var(--text-color);
+            text-transform: uppercase;
+            background-color:inherit ;
+
+            background-color: none;
+            box-shadow: none;
+            border: none;
+
+
+        }
+        body.mode-dark  .logo {
+            text-transform: uppercase;
+            background-color:inherit ;
+             background-color: none;
+            box-shadow: none;
+            border: none;
+        }
+        h2{
+            font-size: 2rem;
+            width: 60%;
+            margin: 2rem auto;
+            margin-top: 2rem ;
+        }
+         header {
+            
+            justify-content: center;
+            width: 100vw;
+            min-width: 100vw;
+            max-width: 100vw;
+            left: 0;
+            right: 0;
+            position: relative;
+        }
+        header nav {
+            width: auto;
+            min-width: 0;
+            max-width: 90vw;
+            margin: 1rem auto;
+            
+        }
+        main{
+            h2{
+            font-size: 2rem;
+            width: 40%;
+            
+            margin: 2rem auto auto 11rem;
+        }
+        h3{
+            font-size: 1rem;
+            width:60%;
+            margin-left: 15%;
+            padding: 0.5rem;
+        }
+        }
+        .contact-info a{
+            width: 80%;
+            padding: 0.5rem 1rem;
+            font-size: 0rem;
+            
+        }
+        .contact-info ion-icon {
+            font-size: 3rem;
+            margin-right: 0.4em;
+        }
+}

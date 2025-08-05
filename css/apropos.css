@@ -434,62 +434,6 @@ body.mode-dark .page-flex section {
     margin: 0 0 2rem 0;
 }
 
-.download-cv-btn {
-    display: inline-block;
-    background: var(--bgcolor_green);
-    color: var(--bgcolor_main);
-    font-family: 'Space Mono', monospace;
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 1rem 2.5rem;
-    letter-spacing: 0.05em;
-    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-    outline: none;
-    text-align: center;
-}
-body.mode-dark .download-cv-btn {
-    display: inline-block;
-    background: var(--bgcolor_pink);
-    color: var(--bgcolor_main);
-    font-family: 'Space Mono', monospace;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--text-color);
-    text-transform: uppercase;
-    padding: 1rem 2.5rem;
-    letter-spacing: 0.05em;
-    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-    outline: none;
-    text-align: center;
-}
-
-.download-cv-btn:hover,
-.download-cv-btn:focus {
-    background: var(--bgcolor_pink);
-    color: #fff;
-    box-shadow: 0 4px 16px #0003;
-    text-decoration: underline;
-}
-body.mode-dark .download-cv-btn:hover,
-body.mode-dark .download-cv-btn:focus {     
-    background: var(--bgcolor_green);
-    color: black;
-    box-shadow: 0 4px 16px #0003;
-    text-decoration: underline;
-}
-
-
-li:has(.download-cv-btn) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: -14rem ;
-    padding: 0.5rem 0;
-}
 
 footer {
     text-align: center;
@@ -600,6 +544,7 @@ footer::before {
 
         .tabs__menu, .tabs__menu a{
         display: block;
+        
     }
     .tabs__menu > li , .tabs__menu > li.is-active {
         border-right: 1px solid var(--bgcolor_green);
@@ -647,6 +592,8 @@ footer::before {
         margin-left: 1rem;
         margin-right: 1rem;
     }
+
+    
     
 }
     

@@ -113,6 +113,48 @@ section h1{
         
     }
     
+
+
+    
+
+.boutons-projets {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 4rem;
+}
+
+.boutons-projets li {
+    flex: 1;
+    text-align: center;
+}
+
+.boutons-projets li.gauche {
+    text-align: left;
+    color: var(--bgcolor_pink);
+}
+
+.boutons-projets li.droite {
+    text-align: right;
+    color: var(--bgcolor_pink);
+}
+
+.projet_perso {
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--bgcolor_pink);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.projet_perso:hover {
+    color: var(--bgcolor_green);
+    transform: translateY(-4px);
+}
+
+    
 }
 body.mode-dark main {
         width: 90%;
@@ -126,6 +168,7 @@ body.mode-dark main {
         box-shadow: .5rem .3rem 0 black;
         background: var(--bgcolor_main);
         padding: 2rem 0;
+        
     }
 
     .projects-scroll {

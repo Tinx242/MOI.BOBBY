@@ -1,9 +1,4 @@
 @import url(./main.css);
-body.mode-light {
-    background-color: var(--bgcolor);
-    color: var(--text-color);
-    transition: background 0.4s, color 0.4s;
-}
 
 body.mode-dark {
     background-color: var(--bgcolor_main);

@@ -30,8 +30,31 @@
         </nav>
     </header>
 
+     <section>
+        <h1>
+            MOI.BOBBY
+        </h1>
+    </section>
+
     <main>
-        <h2>Projet_perso</h2>
+        <section class="choix">
+    <h2>Projet_perso</h2>
+    <ul class="boutons-projets">
+        <li class="gauche">
+            <a href="./développement.html" class="projet_perso">
+                <ion-icon name="arrow-back-outline" aria-hidden="true"></ion-icon>
+                Développement
+            </a>
+        </li>
+        <li class="droite">
+            <a href="./réseau.html" class="projet_perso">
+                Réseau
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+        </li>
+    </ul>
+</section>
+        
 
         <div class="projects-scroll">
             <!-- Projet 1 -->
@@ -70,8 +93,21 @@
                     <p>Jeu style space invaders .</p>
                 </div>
             </div>
+            <!-- Projet 4 -->
+            <div class="project-card"
+                 data-img="./asset/nestdroplogo.png"
+                 data-desc="NextDrop est un projet web développé par deux passionnés de jeux vidéo. Il a pour but de présenter chaque mois les nouveaux jeux à venir."
+                 data-tech="HTML,CSS,JavaScript"
+                 data-link="">
+                <img src="./asset/nestdroplogo.png" alt="NextDrop" class="project-img">
+                <div class="project-info">
+                    <h3>NextDrop</h3>
+                    <p>Site de sortie de Jeu Video.</p>
+                </div>
+             </div>
+            </div>
         </div>
-
+         
         <!-- Modal pour l'image, la description détaillée, les technos et le bouton -->
         <div class="modal" id="project-modal">
             <div class="modal-content">
