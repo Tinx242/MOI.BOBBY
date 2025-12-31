@@ -1,58 +1,33 @@
-function loadThemeCSS(theme) {
-    let darkLink = document.getElementById('dark-mode-css');
-    if (theme === 'dark') {
-        if (!darkLink) {
-            darkLink = document.createElement('link');
-            darkLink.rel = 'stylesheet';
-            darkLink.href = 'css/dark-mode.css';
-            darkLink.id = 'dark-mode-css';
-            document.head.appendChild(darkLink);
-        }
-    } else {
-        if (darkLink) {
-            darkLink.parentNode.removeChild(darkLink);
-        }
-    }
+// Sélectionner le bouton et l'icône
+const toggleButton = document.querySelector('.toggle-dark-mode');
+const themeIcon = document.getElementById('theme-logo');
+
+// Vérifier si un mode est déjà sauvegardé
+const currentMode = localStorage.getItem('theme') || 'light';
+
+// Appliquer le mode au chargement
+if (currentMode === 'dark') {
+    document.body.style.backgroundColor = '#1a1a2e';
+    themeIcon.setAttribute('name', 'sunny');
+} else {
+    document.body.style.backgroundColor = 'rgb(199, 199, 191)';
+    themeIcon.setAttribute('name', 'moon');
 }
 
-const toggleBtn = document.querySelector('.toggle-dark-mode');
-const themeLogo = document.getElementById('theme-logo');
-
-function updateToggleIcon(theme) {
-    if (!themeLogo) return;
-    themeLogo.setAttribute('name', theme === 'dark' ? 'moon' : 'sunny');
-}
-
-function toggleDarkMode() {
-    const body = document.body;
-    if (body.classList.contains('mode-dark')) {
-        body.classList.remove('mode-dark');
-        body.classList.add('mode-light');
+// Ajouter l'événement de clic
+toggleButton.addEventListener('click', () => {
+    const currentBgColor = getComputedStyle(document.body).backgroundColor;
+    
+    // Vérifier si on est en mode sombre ou clair
+    if (currentBgColor === 'rgb(26, 26, 46)') {
+        // Passer au mode clair
+        document.body.style.backgroundColor = 'rgb(199, 199, 191)';
+        themeIcon.setAttribute('name', 'moon');
         localStorage.setItem('theme', 'light');
-        loadThemeCSS('light');
-        updateToggleIcon('light');
     } else {
-        body.classList.remove('mode-light');
-        body.classList.add('mode-dark');
+        // Passer au mode sombre
+        document.body.style.backgroundColor = '#1a1a2e';
+        themeIcon.setAttribute('name', 'sunny');
         localStorage.setItem('theme', 'dark');
-        loadThemeCSS('dark');
-        updateToggleIcon('dark');
-    }
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        document.body.classList.add('mode-light');
-        loadThemeCSS('light');
-        updateToggleIcon('light');
-    } else {
-        document.body.classList.add('mode-dark');
-        loadThemeCSS('dark');
-        updateToggleIcon('dark');
     }
 });
-
-if (toggleBtn) {
-    toggleBtn.addEventListener('click', toggleDarkMode);
-}

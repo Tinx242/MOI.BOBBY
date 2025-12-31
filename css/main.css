@@ -1,12 +1,16 @@
 @import url(./reset.css);
 
 :root{
+    
     --bgcolor_green: #BAFF39;
     --bgcolor_pink: #EF036C;
-    --bgcolor: #6E6E6E ;
+    --bgcolor:#1a1a2e;
     --text-color: #ffff;
     --bgcolor_main: #352f39;
+    --mode-claire:  rgb(199, 199, 191);
 }
+
+
 
 
 
@@ -17,9 +21,11 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid var(--bgcolor_green);
+    border-bottom: 0.6rem solid var(--bgcolor_green);
+    flex-wrap: wrap;
+
+    
     h1{
-        
         background-color: inherit;
         line-height: 8.5rem;
         color: #fff;
@@ -27,8 +33,14 @@ header{
         font-weight: 700rem;
         font-size: 3em;
         padding-left: 2rem;
-        text-shadow: 0 -1rem 0 rgb(186, 255, 57);
-        font-family: 'Anton';
+        font-family: 'Anton',sans-serif;
+        position: relative;
+        text-shadow: 
+            0 -1rem 0 rgb(186, 255, 57),
+            0.3rem 0.3rem 0 rgba(0, 0, 0, 0.5),
+            0.6rem 0.6rem 0 rgba(0, 0, 0, 0.3);
+        letter-spacing: 0.05em;
+        transition: all 0.3s ease;
     }
 
     nav ul{
@@ -64,62 +76,71 @@ header{
     
 }
 .toggle-dark-mode {
-   
     width: 20%;
+    min-width: 15rem;
     padding: 1rem 3rem;
     background: var(--bgcolor_green);
-    border: none;
+    border: 0.3rem solid black;
     border-radius: 2rem;
     font-size: 2rem;
     
+    box-shadow: 0.4rem 0.4rem 0 black;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-right: 2rem;
 }
-body.mode-dark nav ul li:hover a {
-        background-color: var(--bgcolor_main);
-        color: var(--bgcolor_green);
-    }
+
+.toggle-dark-mode:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0.6rem 0.6rem 0 black;
+}
+
+.toggle-dark-mode:active {
+    transform: scale(0.98);
+    box-shadow: 0.2rem 0.2rem 0 black;
+}
+
+    
+
 
 
 
 main {
     width: 90%;
-    margin: 0 auto;
+    margin: 3rem auto 0 auto;
     max-width: 120rem;
     display: grid;
-    
-    grid-template-columns: center repeat(3, 1fr);
-    gap: 1rem;
-    border:  .4rem solid var(--bgcolor_green);
-    
-    box-shadow: .5rem .3rem 0 black;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    border: 0.4rem solid var(--bgcolor_green);
+    box-shadow: 0.8rem 0.8rem 0 black;
     background: var(--bgcolor_main);
-    padding: 2rem 0;
-    
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    position: relative;
 }
 
-section h1{
-    display: none;
-}
+
   
 h2 {
-        width: 60%;
-        margin: 2rem auto;
-        margin-top: 5rem ;
-            
-        color: var(--text-color);    
-        text-align: center;               
-        font-weight: bolder;
-        text-transform: uppercase;
-        font-family: 'Anton'; 
-        font-size: 4rem;       
-
-        border: .3rem solid black; 
-        box-shadow: .5rem .3rem 0 var(--bgcolor_green) ;        
-        background-color: var(--bgcolor_pink); 
-        
+    width: 70%;
+    margin: 2rem auto 3rem;
+    color: var(--text-color);
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+    font-size: 4rem;
+    border: 0.3rem solid black;
+    box-shadow: 0.6rem 0.6rem 0 var(--bgcolor_green);
+    background-color: var(--bgcolor_pink);
+    padding: 1.5rem;
+    letter-spacing: 0.15em;
+    position: relative;
+    overflow: hidden;
     }
-     
-     
 
+     
      
 
     section {
@@ -230,209 +251,158 @@ h2 {
         
 
     footer {
-        
-        text-align: center;
-        padding: 1rem;
-        margin: 1rem auto;
-        background-color: var(--bgcolor_main);
-        color: var(--text-color);
-        font-family: 'Space Mono';
-        width: fit-content;
-        display: block;
-        padding: 0.5rem 2rem;
-        margin: 1rem auto 0 auto;
-        position: relative;
-        transition: color 0.4s;
-    }
-
-    footer::before {
-        content: "";
-        position: absolute;
-        top: 0.5rem;
-        left: 0.5rem;
-        height: calc(100% - 1rem);
-        width: 16ch; 
-        background: var(--bgcolor);
-        z-index: 0;
-        pointer-events: none;
-    }
-
-    footer span, footer p, footer strong, footer em {
-        position: relative;
-        z-index: 2;
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-        transition: color 0.4s;
-    }
-
-    footer .copyright, 
-    footer .copyright * {
-    color: var(--bgcolor_pink);
-    transition: color 0.4s;
-    }
-
-    footer:hover,
-    footer:hover span,
-    footer:hover p,
-    footer:hover strong,
-    footer:hover em {
-    color: var(--bgcolor_pink);
-    }
-
-    footer:hover .copyright,
-    footer:hover .copyright * {
-    color: var(--bgcolor);
-    }
-
-    @media (max-width: 700px) {
-        
-        header h1 {
-            display: none;
-        }
-        header {
-            
-            justify-content: center;
-            width: 100vw;
-            min-width: 100vw;
-            max-width: 100vw;
-            left: 0;
-            right: 0;
-            position: relative;
-        }
-        header nav {
-            width: auto;
-            min-width: 0;
-            max-width: 90vw;
-            margin: 1rem auto;
-            
-        }
-        
-        header nav ul li {
-            font-size: 1.8rem;
-        }
-        section h1{
-            display: block;
-            width: 80%;
-            margin: 2rem auto;
             text-align: center;
-            font-size: 2.5rem;
-            text-shadow: 0 -1rem 0 rgb(186, 255, 57);
-            font-family: 'Anton';
+            padding: 2rem;
+            margin: 4rem auto 2rem;
+            background-color: var(--bgcolor_main);
             color: var(--text-color);
-            text-transform: uppercase;
-            background-color:inherit ;
-        }
-        h2{
-            font-size: 2rem;
-            width: 80%;
-            
-            margin: 2rem auto;
-            margin-top: 2rem ;
+            font-family: 'Space Mono', monospace;
+            width: fit-content;
+            border: 0.3rem solid var(--bgcolor_green);
+            box-shadow: 0.5rem 0.5rem 0 black;
+            position: relative;
+            border-radius: 1rem;
         }
 
-        section > * {
-            width: 30%;
-            flex-direction: column;
-            gap: 1.5rem;
-            padding: 1rem;
-        }
-        section li .card1{
-        margin: 0 21rem 0 0;
-        }
-        section li .card2 {
-        margin: -30rem 0 0 13rem;
-        }
-        section li .card3 {
-        margin:  -16rem 0 0 0;
-        }
-        section li.card2 figure figcaption {
-            right: -1rem;
-        }
-        section li.card1 figure figcaption {
-            right: -1.6rem;
-        }
-        figure img {
-            width: 14rem;
-            height: 20rem;
-        }
-        figure figcaption {
-            margin-top: -2rem;
-            font-size: 1rem;
-            padding: 0.6rem;
-            right: -2rem;
-            
-        }
-        .number {
-            width: 2.5rem;
-            height: 2.5rem;
-            font-size: 1.2rem;
-            top: -1.5rem;
-            right: -0.5rem;
+        footer p {
+            font-size: 1.6rem;
         }
 
-        footer {
-            font-size: 1rem;
-            padding: 0.5rem 1rem;
-            margin: 1rem auto 0 auto;
-        }
+    @media (max-width: 1024px) {
+    h2 {
+        font-size: 3rem;
+        width: 85%;
     }
 
-    @media screen and (orientation: landscape) and (max-width: 1000px) {
+    section > * {
+        gap: 10rem;
+    }
 
-        section > * {  
-            gap: 9rem;
-        }
+    figure img {
+        width: 22rem;
+        height: 30rem;
+    }
+}
 
-        figure img {
-        width: 16rem;
-        height: 24rem;
-        object-fit: cover;
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    header h1 {
         display: block;
-        right: 1rem;
-        
+        width: 90%;
+        margin: 2rem auto;
+        text-align: center;
+        font-size: 2.5rem;
+        padding-left: 0;
+        line-height: normal;
     }
+
+    header nav {
+        width: 100%;
+        margin: 0;
+    }
+
+    header nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    header nav ul li {
+        width: auto;
+        padding: 0 1rem;
+        line-height: 5rem;
+        font-size: 1.8rem;
+    }
+
+    .toggle-dark-mode {
+        width: 90%;
+        margin: 1rem auto;
+        min-width: 0;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        width: 90%;
+        margin: 1.5rem auto 2rem;
+    }
+
+    section > * {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    figure img {
+        width: 18rem;
+        height: 25rem;
+    }
+
     figure figcaption {
         margin-top: -3rem;
-        font-size: 1.2rem;
-        padding: 0.8rem;
-        right: -.9rem;
+        font-size: 1.3rem;
+        padding: 1rem;
+        right: -4rem;
+    }
 
-    
+    .number {
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
+        top: -2rem;
+        right: -0.8rem;
+    }
+
+    footer {
+        margin: 2rem auto 1rem;
+        padding: 1.5rem;
+    }
+
+    footer p {
+        font-size: 1.4rem;
     }
 }
-    @media screen and (orientation: portrait) and (max-width: 1000px) {
 
-        section > * {
-            gap: 9rem;
-        }
-        figure img {
-        width: 14rem;
-        height: 20rem;
-        object-fit: cover;
-        display: block;
-        
+@media (max-width: 480px) {
+    header nav ul li {
+        font-size: 1.6rem;
+        line-height: 4.5rem;
+        padding: 0 0.8rem;
     }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    figure img {
+        width: 15rem;
+        height: 21rem;
+    }
+
     figure figcaption {
-        margin-top: -2rem;
-        font-size: 1rem;
-        padding: 0.6rem;
-        right: -2rem;
+        margin-top: -2.5rem;
+        font-size: 1.1rem;
+        padding: 0.8rem;
+        right: -3rem;
+    }
 
-    
+    .number {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.7rem;
+        top: -1.7rem;
+        right: -0.6rem;
+    }
+
+    footer p {
+        font-size: 1.2rem;
     }
 }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-

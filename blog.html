@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Veille Technologique</title>
+    <link rel="stylesheet" href="./css/blog.css">
+    <link rel="styalesheet" href="./css/dark-mode.css">
+</head>
+<body>
+    <header>
+        <h1>MOI.BOBBY</h1>
+        <button class="toggle-dark-mode" aria-label="Changer le mode sombre/clair">
+                    <ion-icon id="theme-logo" name="moon" aria-hidden="true"></ion-icon>
+                </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="apropos.html">A PROPOS</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contacts.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CARROUSEL -->
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <div class="carousel-slide active">
+                <img src="./asset/f1-active-aero.jpg" alt="Voiture F1 en soufflerie" class="carousel-image">
+                <div class="carousel-caption">
+                    <h2>🏎️ Intelligence Artificielle en Soufflerie</h2>
+                    <p>Ma veille technologique explore comment l'IA révolutionne les tests aérodynamiques en Formule 1. Les algorithmes d'apprentissage automatique permettent d'optimiser les performances des monoplaces en réduisant considérablement les temps de développement.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./asset/F1.jpg" alt="Simulation CFD F1" class="carousel-image">
+                <div class="carousel-caption">
+                    <h2>💨 Simulation CFD et Machine Learning</h2>
+                    <p>La combinaison de la dynamique des fluides numérique (CFD) avec le machine learning permet aux écuries de tester virtuellement des milliers de configurations aérodynamiques avant même de fabriquer un prototype physique.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./asset/F1_2026.jpg" alt="Données F1 en temps réel" class="carousel-image">
+                <div class="carousel-caption">
+                    <h2>📊 Analyse Prédictive des Performances</h2>
+                    <p>Les réseaux de neurones analysent en temps réel les données collectées lors des essais pour prédire le comportement aérodynamique des voitures dans différentes conditions de course, offrant un avantage compétitif majeur.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./asset/aero f1.avif" alt="Technologie F1 future" class="carousel-image">
+                <div class="carousel-caption">
+                    <h2>🚀 Le Futur : Jumeaux Numériques IA</h2>
+                    <p>Vers 2026, les écuries développent des jumeaux numériques complets de leurs voitures, alimentés par l'IA, permettant de tester virtuellement chaque modification avant la fabrication, transformant radicalement le processus de développement.</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="carousel-btn prev" onclick="changeSlide(-1)">‹</button>
+            <button class="carousel-btn next" onclick="changeSlide(1)">›</button>
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator active" onclick="goToSlide(0)"></span>
+            <span class="indicator" onclick="goToSlide(1)"></span>
+            <span class="indicator" onclick="goToSlide(2)"></span>
+            <span class="indicator" onclick="goToSlide(3)"></span>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <section class="hero">
+            <h2>🚀 Bienvenue sur mon blog tech</h2>
+            <p>
+                Passionné de <strong style="color: #EF036C;">Formule 1</strong> et de <strong style="color: #BAFF39;">technologies innovantes</strong>, 
+                je documente ici ma veille technologique sur l'utilisation de l'intelligence artificielle dans les souffleries de développement des voitures de F1.
+            </p>
+            <p>
+                La F1 est à la pointe de l'innovation, et l'IA révolutionne la façon dont les écuries développent l'aérodynamisme de leurs monoplaces. 
+                Découvrez comment les algorithmes d'apprentissage automatique optimisent les tests en soufflerie et réduisent les temps de développement.
+            </p>
+        </section>
+
+        <div class="articles-grid">
+            <article class="article-card">
+                <span class="article-tag">IA & AÉRO</span>
+                <h3>L'IA transforme les souffleries F1</h3>
+                <span class="date">📅 25 Novembre 2025</span>
+                <p>
+                    Les écuries de F1 utilisent désormais des réseaux de neurones pour prédire les performances aérodynamiques, 
+                    réduisant de 40% le temps passé en soufflerie physique. Une révolution qui change la donne.
+                </p>
+                <a href="#" class="read-more">LIRE L'ARTICLE →</a>
+            </article>
+
+            <article class="article-card">
+                <span class="article-tag">MACHINE LEARNING</span>
+                <h3>CFD + IA : Le duo gagnant</h3>
+                <span class="date">📅 20 Novembre 2025</span>
+                <p>
+                    La combinaison de la simulation CFD (Computational Fluid Dynamics) et de l'apprentissage automatique 
+                    permet d'obtenir des résultats 10 fois plus rapidement qu'avec les méthodes traditionnelles.
+                </p>
+                <a href="#" class="read-more">LIRE L'ARTICLE →</a>
+            </article>
+
+            <article class="article-card">
+                <span class="article-tag">INNOVATION</span>
+                <h3>Red Bull et l'IA générative</h3>
+                <span class="date">📅 15 Novembre 2025</span>
+                <p>
+                    Red Bull Racing utilise des algorithmes génératifs pour créer des milliers de variations d'aileron, 
+                    testées virtuellement avant validation en soufflerie. Une approche qui a contribué à leur domination.
+                </p>
+                <a href="#" class="read-more">LIRE L'ARTICLE →</a>
+            </article>
+
+            <article class="article-card">
+                <span class="article-tag">DEEP LEARNING</span>
+                <h3>Optimisation temps réel en piste</h3>
+                <span class="date">📅 10 Novembre 2025</span>
+                <p>
+                    Les données collectées lors des essais sont analysées par des modèles de deep learning qui ajustent 
+                    instantanément les paramètres aérodynamiques pour maximiser les performances en course.
+                </p>
+                <a href="#" class="read-more">LIRE L'ARTICLE →</a>
+            </article>
+
+            <article class="article-card">
+                <span class="article-tag">RÉGLEMENTATION</span>
+                <h3>Les limites imposées par la FIA</h3>
+                <span class="date">📅 5 Novembre 2025</span>
+                <p>
+                    La FIA régule l'utilisation des souffleries et de la CFD, mais l'IA ouvre de nouvelles possibilités 
+                    dans le cadre réglementaire. Analyse des zones grises et des opportunités d'innovation.
+                </p>
+                <a href="#" class="read-more">LIRE L'ARTICLE →</a>
+            </article>
+
+            <article class="article-card">
+                <span class="article-tag">FUTUR</span>
+                <h3>2026 : L'ère des jumeaux numériques</h3>
+                <span class="date">📅 1 Novembre 2025</span>
+                <p>
+                    Avec le nouveau règlement 2026, les écuries investissent massivement dans des jumeaux numériques 
+                    alimentés par l'IA pour tester virtuellement chaque modification avant la fabrication physique.
+                </p>
+                <a href="#" class="read-more">LIRE L'ARTICLE →</a>
+            </article>
+        </div>
+
+        <aside class="sidebar">
+            <h3>🔍 Thématiques de veille</h3>
+            <ul>
+                <li>🤖 Algorithmes d'optimisation aérodynamique</li>
+                <li>💨 Simulation de flux d'air par IA</li>
+                <li>📊 Analyse prédictive des performances</li>
+                <li>🔬 Machine learning en soufflerie</li>
+                <li>⚡ Réduction des coûts de développement</li>
+                <li>🏆 Études de cas : Mercedes, Red Bull, Ferrari</li>
+                <li>📈 Évolution des réglementations techniques</li>
+                <li>🌐 Technologies émergentes en F1</li>
+            </ul>
+        </aside>
+
+        <aside class="sidebar">
+            <h3>💡 Pourquoi cette veille ?</h3>
+            <ul>
+                <li>Passion pour la F1 et les technologies de pointe</li>
+                <li>Comprendre l'impact de l'IA dans le sport automobile</li>
+                <li>Suivre les innovations des écuries leaders</li>
+                <li>Anticiper les tendances futures du développement F1</li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; - Portfolio <time datetime="2025">2025</time></p>
+    </footer>
+    <script type="module" src="./js/dark-mode.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            indicators[currentSlide].classList.remove('active');
+            
+            currentSlide = (n + slides.length) % slides.length;
+            
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        function goToSlide(n) {
+            showSlide(n);
+        }
+
+        // Auto-play
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+    </script>
+</body>
+</html>
