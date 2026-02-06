@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détails du projet Personnel - Gestionnaire d'employés M2L">
+    <title>Projet Personnel - Moi.Bobby</title>
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/dark-mode.css">
+    <link rel="stylesheet" href="./css/personnelDetail.css">
+</head>
+
+<body>
+    <header>
+        <h1>MOI.BOBBY</h1>
+        
+        <button class="toggle-dark-mode" aria-label="Changer le mode sombre/clair">
+            <ion-icon id="theme-logo" name="moon" aria-hidden="true"></ion-icon>
+        </button>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="apropos.html">A PROPOS</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contacts.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <div class="file">
+            <a href="index.html">Accueil</a> / 
+            <a href="développement.html">Développement</a> / 
+            <span>Personnel</span>
+        </div>
+
+        <section class="hero-project">
+            <img src="./asset/halloween-1299194_1280.png" alt="Projet Personnel" class="hero-img">
+            <div class="hero-info">
+                <h2>Personnel - Gestionnaire d'employés M2L</h2>
+                <div class="tech-stack">
+                    <img src="./asset/java.svg" alt="Java" title="Java">
+                    <img src="./asset/mysql.svg" alt="MySQL" title="MySQL">
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Tinx242/Personnel" target="_blank" class="btn-primary">
+                        <ion-icon name="logo-github"></ion-icon>
+                        Code Source
+                    </a>
+                    <a href="https://enseignement.alexandre-mesle.com/PPE/personnel/javadoc/personnel/package-summary.html" target="_blank" class="btn-secondary">
+                        <ion-icon name="document-text-outline"></ion-icon>
+                        Documentation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="context">
+            <h3>🎯 Contexte du projet</h3>
+            <p>
+                Ce projet a été réalisé dans le cadre de la gestion des employés de la Maison des Ligues de Lorraine (M2L). 
+                L'objectif était de transformer une application mono-utilisateur en ligne de commande en un système multi-utilisateurs 
+                avec différents niveaux d'habilitation.
+            </p>
+        </section>
+
+        <section class="resources">
+            <h3>📦 Ressources fournies</h3>
+            <ul>
+                <li><strong style="color: #BAFF39;">Code source initial</strong> : Application Java configurée pour Eclipse avec architecture 3-tiers</li>
+                <li><strong style="color: #BAFF39;">Documentation</strong> : Spécifications techniques et fonctionnelles</li>
+                <li><strong style="color: #BAFF39;">Bibliothèque CLI</strong> : Outil de dialogue en ligne de commande</li>
+                <li><strong style="color: #BAFF39;">Architecture existante</strong> : Structure 3-tiers à conserver (Présentation, Métier, Données)</li>
+            </ul>
+        </section>
+
+        <section class="achievements">
+            <h3>✨ Réalisations et développements</h3>
+            
+            <div class="achievement-item">
+                <h4>1. Migration vers une base de données MySQL</h4>
+                <p>
+                    Transformation de l'application mono-utilisateur en système multi-utilisateurs grâce à l'implémentation 
+                    d'une base de données relationnelle. Cette migration a permis la gestion simultanée de plusieurs utilisateurs 
+                    et la persistance des données.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>2. Système d'authentification et d'habilitation</h4>
+                <p>Mise en place de trois niveaux d'accès distincts :</p>
+                <ul>
+                    <li><strong>Employé simple</strong> : Accès en lecture seule (consultation de l'annuaire)</li>
+                    <li><strong>Administrateur de ligue</strong> : Gestion des employés de sa propre ligue via application bureau</li>
+                    <li><strong>Super-administrateur</strong> : Accès total + gestion des comptes administrateurs via CLI</li>
+                </ul>
+            </div>
+
+            <div class="achievement-item">
+                <h4>3. Respect de l'architecture 3-tiers</h4>
+                <p>
+                    Conservation et amélioration de l'architecture applicative existante en séparant clairement 
+                    les couches Présentation, Métier et Accès aux données, garantissant ainsi la maintenabilité 
+                    et l'évolutivité du système.
+                </p>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <h3>📸 Captures d'écran</h3>
+            <div class="screenshot-grid">
+                <div class="screenshot-item">
+                    <img src="./asset/interface deConnexion.JPG" alt="Écran de connexion" onerror="this.style.display='none'">
+                    <p>Interface de connexion</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="./asset/Structuration.JPG" alt="Interface administrateur" onerror="this.style.display='none'">
+                    <p>Structuration du projet</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="./asset/gestionEmploye.JPG" alt="Liste des employés" onerror="this.style.display='none'">
+                    <p>Gestion des employés</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="database">
+            <h3>🗄️ Modèle Conceptuel de Données (MCD)</h3>
+            <div class="mcd-container">
+                <img src="./asset/MCD.png" alt="MCD du projet Personnel" onerror="this.style.display='none'">
+                <div class="mcd-description">
+                    <h4>Entités principales :</h4>
+                    <ul>
+                        <li><strong style="color: #BAFF39;">EMPLOYE</strong> : Informations détaillées des employés , Niveaux d'habilitation (Employé, Admin, Super-admin)</li>
+                        <li><strong style="color: #BAFF39;"> LIGUE</strong> : Organisation des ligues</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="technologies">
+            <h3>🛠️ Technologies utilisées</h3>
+            <div class="tech-list">
+                <div class="tech-item">
+                    <img src="./asset/java.svg" alt="Java">
+                    <h4>Java</h4>
+                    <p>Langage principal pour la logique métier et l'architecture 3-tiers</p>
+                </div>
+                <div class="tech-item">
+                    <img src="./asset/mysql.svg" alt="MySQL">
+                    <h4>MySQL</h4>
+                    <p>Base de données relationnelle pour la persistance multi-utilisateurs</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenges">
+            <h3>🚀 Défis relevés</h3>
+            <ul>
+                <li>Migration d'une architecture mono-utilisateur vers multi-utilisateurs</li>
+                <li>Implémentation d'un système de permissions granulaire</li>
+                <li>Respect strict de l'architecture 3-tiers existante</li>
+                <li>Gestion de la sécurité et de l'authentification</li>
+                <li>Compatibilité entre interface CLI et interface bureau</li>
+            </ul>
+        </section>
+
+        <div class="back-navigation">
+            <a href="développement.html" class="btn-back">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                Retour aux projets
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; - Portfolio <time datetime="2025">2025</time></p>
+    </footer>
+
+    <script type="module" src="./js/dark-mode.js"></script>
+    
+    <script type="module" src="./js/menu.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
