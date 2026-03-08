@@ -15,7 +15,11 @@ const techLogos = {
     Glide: './asset/glide.svg',
     "glide.js": './asset/glide.svg',
     Gns3: './asset/gns3.png',
-     Mysql: './asset/mysql.svg',
+    Mysql: './asset/mysql.svg',
+    Laravel : './asset/laravel.svg', 
+    XML: './asset/xml.svg',
+    Android_Studio: './asset/android-studio.svg'
+
 };
 
 document.addEventListener('DOMContentLoaded', () => {

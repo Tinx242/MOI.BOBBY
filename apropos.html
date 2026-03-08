@@ -29,7 +29,6 @@
 
     <main>
         <div class="about-container">
-            <!-- Section Photo et Info -->
             <section class="profile-section">
                 <div class="profile-card">
                     <div class="profile-image-wrapper">
@@ -118,68 +117,54 @@
                     MES STAGES & EXPÉRIENCES
                 </h2>
                 
-                <div class="projects-scroll">
-                    <!-- Stage 1 - Exemple à personnaliser -->
-                    <div class="project-card"
-                         data-img="./asset/moispace.jpg"
-                         data-desc="Stage en développement web au sein d'une entreprise innovante. Participation à la création d'applications web modernes, développement d'interfaces utilisateur responsives, et collaboration avec une équipe agile."
-                         data-tech="HTML,CSS,JavaScript,React"
-                         data-period="Juin 2024 - Août 2024"
-                         data-company="Entreprise Tech">
-                        <img src="./asset/moispace.jpg" alt="Stage Développement Web" class="project-img">
-                        <div class="project-info">
-                            <h3>Stage Développement Web</h3>
-                            <p>Juin 2024 - Août 2024 • Entreprise Tech</p>
+                <div class="stages-list">
+
+                    <div class="stage-row">
+                        <img src="./asset/iaevo.png" alt="STAGE 2eme Année BTS-SIO SLAM" class="stage-img">
+                        <div class="stage-body">
+                            <div class="stage-header">
+                                <h3 class="stage-title">STAGE 2eme Année BTS-SIO SLAM</h3>
+                                <span class="stage-period">Novembre — Décembre 2025</span>
+                            </div>
+                            <p class="stage-company">Création D’IA Collaboration avec un Freelance</p>
+                            <p class="stage-desc">Participation à la création d'applications web modernes, développement d'interfaces utilisateur responsives, et collaboration avec une équipe agile.</p>
+                            <div class="stage-techs">
+                                <span>PYTHON</span><span>SELENIUM</span><span>AutoHotKey</span><span>Beautiful Soup</span><span>JUPYTER NOTEBOOK</span><span>ANACONDA</span>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Stage 2 - Exemple à personnaliser -->
-                    <div class="project-card"
-                         data-img="./asset/stage2.jpg"
-                         data-desc="Stage en administration réseau. Configuration et maintenance de l'infrastructure réseau, gestion des serveurs, sécurisation des systèmes et support technique aux utilisateurs."
-                         data-tech="Gns3,MySQL,Python"
-                         data-period="Janvier 2024 - Mars 2024"
-                         data-company="IT Solutions">
-                        <img src="./asset/stage2.jpg" alt="Stage Réseau" class="project-img">
-                        <div class="project-info">
-                            <h3>Stage Administration Réseau</h3>
-                            <p>Janvier 2024 - Mars 2024 • IT Solutions</p>
+                    <div class="stage-row">
+                        <img src="./asset/iaevo.png" alt="Stage Administration Réseau" class="stage-img">
+                        <div class="stage-body">
+                            <div class="stage-header">
+                                <h3 class="stage-title">STAGE 1eer Année BTS-SIO SLAM</h3>
+                                <span class="stage-period">Juin — Juillet 2025</span>
+                            </div>
+                            <p class="stage-company">IT Solutions</p>
+                            <p class="stage-desc">Configuration et maintenance de l'infrastructure réseau, gestion des serveurs, sécurisation des systèmes et support technique aux utilisateurs.</p>
+                            <div class="stage-techs">
+                                <span>PYTHON</span><span>SELENIUM</span><span>AutoHotKey</span><span>Beautiful Soup</span><span>JUPYTER NOTEBOOK</span><span>ANACONDA</span>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Stage 3 - À ajouter selon vos expériences -->
-                    <div class="project-card"
-                         data-img="./asset/stage3.jpg"
-                         data-desc="Projet personnel ou stage à venir. Cliquez pour plus de détails sur mes futures expériences professionnelles et projets en cours."
-                         data-tech="À définir"
-                         data-period="À venir"
-                         data-company="Recherche d'alternance">
-                        <img src="./asset/stage3.jpg" alt="Futur Stage" class="project-img">
-                        <div class="project-info">
-                            <h3>Alternance Recherchée</h3>
-                            <p>Septembre 2025 • Recherche en cours</p>
+                    <div class="stage-row stage-row--upcoming">
+                        <img src="./asset/routage.jpg" alt="Alternance recherchée" class="stage-img">
+                        <div class="stage-body">
+                            <div class="stage-header">
+                                <h3 class="stage-title">Alternance Recherchée</h3>
+                                <span class="stage-period">Septembre 2025</span>
+                            </div>
+                            <p class="stage-company">En cours de recherche</p>
+                            <p class="stage-desc">Ouvert à toute opportunité en développement web, design ou systèmes & réseaux. N'hésitez pas à me contacter !</p>
+                            <div class="stage-techs">
+                                <span>À définir</span>
+                            </div>
                         </div>
                     </div>
+
                 </div>
-
-                <!-- Modal pour les stages -->
-                <div class="modal" id="stage-modal">
-                    <div class="modal-content">
-                        <span class="modal-close">&times;</span>
-                        <img src="" alt="Stage" id="modal-stage-img">
-                        <h3 id="modal-stage-title"></h3>
-                        <div class="modal-stage-info">
-                            <p class="modal-period" id="modal-period"></p>
-                            <p class="modal-company" id="modal-company"></p>
-                        </div>
-                        <div class="modal-desc" id="modal-stage-desc"></div>
-                        <div class="modal-techs" id="modal-stage-techs"></div>
-                    </div>
-                </div>
-
-                <p class="note-text">
-                    💡 Cliquez sur une carte pour voir les détails de l'expérience. Cette section sera mise à jour régulièrement.
-                </p>
             </section>
 
             <!-- Section Tableau de Synthèse / Passions -->
@@ -223,6 +208,32 @@
                     </div>
                 </div>
             </section>
+            <!-- Section Tableau de Synthèse -->
+            <section class="tableau-section">
+                <h2 class="section-title">
+                    <span class="title-icon">📋</span>
+                    TABLEAU DE SYNTHÈSE
+                </h2>
+                <div class="content-box">
+                    <p class="intro-text" style="margin-bottom: 2rem;">
+                        Mon tableau de synthèse BTS SIO récapitule l'ensemble de mes réalisations professionnelles et les compétences mises en œuvre au cours de ma formation.
+                    </p>
+                    <div class="tableau-preview-wrapper">
+                        <img
+                            src="./asset/TB Synthèse M.JPG"
+                            alt="Tableau de synthèse BTS SIO MARTHIN"
+                            class="tableau-img"
+                        >
+                        <div class="tableau-overlay-bar">
+                            <span class="tableau-label">📄 Tableau de Synthèse — BTS SIO 2026</span>
+                            <a href="./asset/TABLEAU DE SYNTHESE - BTS SIO MARTHIN.pdf" download="TB_Synthese_BTS_SIO_MARTHIN.jpg" class="btn-download">
+                            TÉLÉCHARGER
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </main>
    

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détails du projet MyConnect - Application de rencontre mobile">
+    <title>Projet MyConnect - Moi.Bobby</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="../css/schoolProjects.css">
+</head>
+
+<body>
+    <header>
+        <h1>MOI.BOBBY</h1>
+        
+        <button class="toggle-dark-mode" aria-label="Changer le mode sombre/clair">
+            <ion-icon id="theme-logo" name="moon" aria-hidden="true"></ion-icon>
+        </button>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../apropos.html">A PROPOS</a></li>
+                <li><a href="../blog.html">BLOG</a></li>
+                <li><a href="../contacts.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <div class="file">
+            <a href="../index.html">Accueil</a> / 
+            <a href="../développement.html">Développement</a> / 
+            <span>MyConnect</span>
+        </div>
+
+        <section class="hero-project">
+            <img src="../asset/MyConnectLogo.JPG" alt="Projet MyConnect" class="hero-img">
+            <div class="hero-info">
+                <h2>MyConnect - Application de rencontre</h2>
+                <div class="tech-stack">
+                    <img src="../asset/java.svg" alt="Java" title="Java">
+                    <img src="../asset/android-studio.svg" alt="android-studio" title="android-studio">
+                    <img src="../asset/xml.svg" alt="XML" title="XML">
+
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Tinx242/MyConnect" target="_blank" class="btn-primary">
+                        <ion-icon name="logo-github"></ion-icon>
+                        Code Source
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="context">
+            <h3>🎯 Contexte du projet</h3>
+            <p>
+                MyConnect est une application mobile de rencontre développée sous Android Studio en Java et XML. 
+                Réalisée dans un contexte pédagogique, elle permet d'explorer les bases du développement Android natif : 
+                gestion des vues, navigation entre activités, personnalisation de l'interface et expérience utilisateur mobile.
+            </p>
+        </section>
+
+        <section class="resources">
+            <h3>🎓 Objectifs pédagogiques</h3>
+            <ul>
+                <li><strong style="color: #BAFF39;">Android Studio</strong> : Prendre en main l'environnement de développement Android</li>
+                <li><strong style="color: #BAFF39;">Java & XML</strong> : Maîtriser la séparation logique (Java) / interface (XML)</li>
+                <li><strong style="color: #BAFF39;">Navigation</strong> : Gérer les transitions entre activités (connexion, inscription, accueil)</li>
+                <li><strong style="color: #BAFF39;">Mode sombre</strong> : Implémenter un thème dynamique activable/désactivable</li>
+                <li><strong style="color: #BAFF39;">UI/UX mobile</strong> : Concevoir une interface adaptée aux standards Android</li>
+                <li><strong style="color: #BAFF39;">Gestion de session</strong> : Afficher dynamiquement les informations utilisateur</li>
+            </ul>
+        </section>
+
+        <section class="achievements">
+            <h3>✨ Fonctionnalités principales</h3>
+            
+            <div class="achievement-item">
+                <h4>1. Mode de connexion</h4>
+                <p>
+                    Écran de connexion permettant à un utilisateur existant de s'authentifier avec ses identifiants. 
+                    La navigation est gérée via des Intents Android vers l'activité principale de l'application.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>2. Mode d'inscription</h4>
+                <p>
+                    Formulaire d'inscription permettant à un nouvel utilisateur de créer son profil avec ses informations personnelles, 
+                    avec validation des champs côté client en Java.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>3. Mode sombre activable / désactivable</h4>
+                <p>
+                    Implémentation d'un switch permettant de basculer entre un thème clair et un thème sombre, 
+                    appliqué dynamiquement à l'ensemble de l'interface via les ressources de thèmes Android.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>4. Menu avec nom d'utilisateur</h4>
+                <p>
+                    Menu principal affichant dynamiquement le nom de l'utilisateur connecté, 
+                    récupéré depuis les données saisies lors de la connexion ou de l'inscription.
+                </p>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <h3>📸 Captures d'écran</h3>
+            <div class="screenshot-grid">
+                <div class="screenshot-item">
+                    <img src="../asset/MyConnect1.jpg" alt="Écran de connexion" onerror="this.style.display='none'">
+                    <p>Interface de connexion</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="../asset/MyConnect2.jpg" alt="Menu principal" onerror="this.style.display='none'">
+                    <p>Menu principal</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="../asset/CodeMyConnect.JPG" alt="Code de connexion" onerror="this.style.display='none'">
+                    <p>Code de connexion</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="database">
+            <h3>🗄️ Architecture de l'application</h3>
+            <div class="mcd-container">
+                <div class="mcd-description">
+                    <h4>Activités principales :</h4>
+                    <ul>
+                        <li><strong style="color: #BAFF39;">LoginActivity</strong> : Gestion de la connexion utilisateur</li>
+                        <li><strong style="color: #BAFF39;">RegisterActivity</strong> : Formulaire d'inscription</li>
+                        <li><strong style="color: #BAFF39;">MainActivity</strong> : Menu principal avec affichage du nom d'utilisateur</li>
+                        <li><strong style="color: #BAFF39;">Thèmes XML</strong> : Gestion du mode sombre / clair via les ressources Android</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="technologies">
+            <h3>🛠️ Stack technique</h3>
+            <div class="tech-list">
+                <div class="tech-item">
+                    <img src="../asset/java.svg" alt="Java">
+                    <h4>Java</h4>
+                    <p>Langage principal pour la logique applicative et la gestion des activités Android</p>
+                </div>
+                <div class="tech-item">
+                    <img src="../asset/xml.svg" alt="XML" onerror="this.style.display='none'">
+                    <h4>XML</h4>
+                    <p>Définition des layouts, thèmes et ressources de l'interface utilisateur</p>
+                </div>
+                <div class="tech-item">
+                    <img src="../asset/android-studio.svg" alt="Android Studio" onerror="this.style.display='none'">
+                    <h4>Android Studio</h4>
+                    <p>Environnement de développement intégré pour applications Android natives</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenges">
+            <h3>🚀 Défis relevés</h3>
+            <ul>
+                <li>Prise en main d'Android Studio et du cycle de vie des activités</li>
+                <li>Gestion de la navigation entre activités via des Intents</li>
+                <li>Implémentation d'un mode sombre dynamique avec les thèmes Android</li>
+                <li>Transmission des données utilisateur entre les activités</li>
+                <li>Conception d'une interface mobile intuitive et responsive</li>
+            </ul>
+        </section>
+
+        <div class="back-navigation">
+            <a href="../développement.html" class="btn-back">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                Retour aux projets
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; - Portfolio <time datetime="2025">2025</time></p>
+    </footer>
+
+    <script type="module" src="../js/dark-mode.js"></script>
+    
+    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

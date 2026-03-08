@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détails du projet SkyStorm - Twitter/X Like">
+    <title>Projet SkyStorm - Moi.Bobby</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="../css/schoolProjects.css">
+</head>
+
+<body>
+    <header>
+        <h1>MOI.BOBBY</h1>
+        
+        <button class="toggle-dark-mode" aria-label="Changer le mode sombre/clair">
+            <ion-icon id="theme-logo" name="moon" aria-hidden="true"></ion-icon>
+        </button>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../apropos.html">A PROPOS</a></li>
+                <li><a href="../blog.html">BLOG</a></li>
+                <li><a href="../contacts.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <div class="file">
+            <a href="../index.html">Accueil</a> / 
+            <a href="../développement.html">Développement</a> / 
+            <span>SkyStorm</span>
+        </div>
+
+        <section class="hero-project">
+            <img src="../asset/SkyStorm.png" alt="Projet SkyStorm" class="hero-img">
+            <div class="hero-info">
+                <h2>SkyStorm - Twitter/X Like</h2>
+                <div class="tech-stack">
+                    <img src="../asset/PHP.svg" alt="PHP" title="PHP">
+                    <img src="../asset/Laravel.svg" alt="Laravel" title="Laravel">
+                    <img src="../asset/mysql.svg" alt="MySQL" title="MySQL">
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Tinx242/SkyStorm" target="_blank" class="btn-primary">
+                        <ion-icon name="logo-github"></ion-icon>
+                        Code Source
+                    </a>
+                    <a href="https://github.com/Tinx242/Documentation_SkyStorm" target="_blank" class="btn-secondary">
+                        <ion-icon name="document-text-outline"></ion-icon>
+                        Documentation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="context">
+            <h3>🎯 Contexte du projet</h3>
+            <p>
+                SkyStorm est une réplique allégée de Twitter/X développée en Laravel 12 dans un contexte pédagogique pour la préparation à 
+                l'épreuve E6 du BTS SIO option SLAM. Le projet est construit en direct avec la classe afin d'illustrer un cycle complet de 
+                développement : conception, modélisation, implémentation et déploiement.
+            </p>
+        </section>
+
+        <section class="resources">
+            <h3>🎓 Objectifs pédagogiques</h3>
+            <ul>
+                <li><strong style="color: #BAFF39;">Architecture MVC</strong> : Comprendre l'architecture MVC de Laravel</li>
+                <li><strong style="color: #BAFF39;">Authentification</strong> : Manipuler l'authentification avec Laravel UI (Bootstrap)</li>
+                <li><strong style="color: #BAFF39;">Modélisation</strong> : Concevoir un MCD et le traduire en base de données relationnelle</li>
+                <li><strong style="color: #BAFF39;">Eloquent ORM</strong> : Gérer les relations n-n et 1-n avec Eloquent</li>
+                <li><strong style="color: #BAFF39;">Fonctionnalités sociales</strong> : Implémenter des fonctionnalités sociales (posts, likes, abonnements)</li>
+                <li><strong style="color: #BAFF39;">Git</strong> : Structurer un projet Git professionnel</li>
+            </ul>
+        </section>
+
+        <section class="achievements">
+            <h3>✨ Fonctionnalités principales</h3>
+            
+            <div class="achievement-item">
+                <h4>1. Inscription / Connexion utilisateur</h4>
+                <p>
+                    Système d'authentification complet via Laravel UI avec Bootstrap, permettant aux utilisateurs de créer un compte,
+                    se connecter et gérer leur session de manière sécurisée.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>2. Gestion des posts</h4>
+                <p>Création, modification et suppression de posts par les utilisateurs authentifiés, avec un fil d'actualité simplifié affichant les publications des comptes suivis.</p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>3. Interactions sociales</h4>
+                <p>
+                    Système de suivi entre utilisateurs (follow/unfollow) et système de likes sur les posts, 
+                    gérés via des relations n-n avec Eloquent ORM.
+                </p>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <h3>📸 Captures d'écran</h3>
+            <div class="screenshot-grid">
+                <div class="screenshot-item">
+                    <img src="../asset/interface deConnexion.JPG" alt="Écran de connexion" onerror="this.style.display='none'">
+                    <p>Interface de connexion</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="../asset/Structuration.JPG" alt="Interface administrateur" onerror="this.style.display='none'">
+                    <p>Structuration du projet</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="../asset/gestionEmploye.JPG" alt="Liste des employés" onerror="this.style.display='none'">
+                    <p>Gestion des employés</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="database">
+            <h3>🗄️ Modèle Conceptuel de Données (MCD)</h3>
+            <div class="mcd-container">
+                <img src="../asset/MCD_SkyStorm.JPG" alt="MCD du projet SkyStorm" onerror="this.style.display='none'">
+                <div class="mcd-description">
+                    <h4>Entités principales :</h4>
+                    <ul>
+                        <li><strong style="color: #BAFF39;">USER</strong> : Informations des utilisateurs, authentification et profil</li>
+                        <li><strong style="color: #BAFF39;">POST</strong> : Contenu publié par les utilisateurs</li>
+                        <li><strong style="color: #BAFF39;">LIKE</strong> : Relation n-n entre utilisateurs et posts</li>
+                        <li><strong style="color: #BAFF39;">FOLLOW</strong> : Relation n-n entre utilisateurs (abonnements)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="technologies">
+            <h3>🛠️ Stack technique</h3>
+            <div class="tech-list">
+                <div class="tech-item">
+                    <img src="../asset/PHP.svg" alt="PHP">
+                    <h4>PHP 8.x</h4>
+                    <p>Langage principal du projet</p>
+                </div>
+                <div class="tech-item">
+                    <img src="../asset/Laravel.svg" alt="Laravel">
+                    <h4>Laravel 12</h4>
+                    <p>Framework MVC avec Blade, Eloquent ORM et Laravel UI (Bootstrap)</p>
+                </div>
+                <div class="tech-item">
+                    <img src="../asset/mysql.svg" alt="MySQL">
+                    <h4>MySQL / MariaDB</h4>
+                    <p>Base de données relationnelle pour la persistance des données</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenges">
+            <h3>🚀 Défis relevés</h3>
+            <ul>
+                <li>Mise en place de l'architecture MVC avec Laravel 12</li>
+                <li>Implémentation des relations n-n (likes, abonnements) avec Eloquent</li>
+                <li>Gestion de l'authentification et de la sécurité des routes</li>
+                <li>Construction d'un fil d'actualité dynamique basé sur les abonnements</li>
+                <li>Structuration d'un projet Git professionnel tout au long du développement</li>
+            </ul>
+        </section>
+
+        <div class="back-navigation">
+            <a href="../développement.html" class="btn-back">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                Retour aux projets
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; - Portfolio <time datetime="2025">2025</time></p>
+    </footer>
+
+    <script type="module" src="../js/dark-mode.js"></script>
+    
+    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
