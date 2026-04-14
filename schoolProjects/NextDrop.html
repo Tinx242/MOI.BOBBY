@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détails du projet NextDrop - Plateforme rétro-futuriste de sorties de jeux vidéo">
+    <title>Projet NextDrop - Moi.Bobby</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="../css/schoolProjects.css">
+</head>
+
+<body>
+    <header>
+        <h1>MOI.BOBBY</h1>
+        
+        <button class="toggle-dark-mode" aria-label="Changer le mode sombre/clair">
+            <ion-icon id="theme-logo" name="moon" aria-hidden="true"></ion-icon>
+        </button>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../apropos.html">A PROPOS</a></li>
+                <li><a href="../blog.html">BLOG</a></li>
+                <li><a href="../contacts.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <div class="file">
+            <a href="../index.html">Accueil</a> / 
+            <a href="../projet_perso.html">Projet_perso</a> / 
+            <span>NextDrop</span>
+        </div>
+
+        <section class="hero-project">
+            <img src="../asset/nestdroplogo.png" alt="Projet NextDrop" class="hero-img">
+            <div class="hero-info">
+                <h2>NextDrop - Prochaines sorties de jeux vidéo</h2>
+                <div class="tech-stack">
+                    <img src="../asset/html5.svg" alt="HTML5" title="HTML5">
+                    <img src="../asset/css.svg" alt="CSS3" title="CSS3">
+                    <img src="../asset/javascript.svg" alt="JavaScript" title="JavaScript">
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Tinx242/NextDrop" target="_blank" class="btn-primary">
+                        <ion-icon name="logo-github"></ion-icon>
+                        Code Source
+                    </a>
+                    <a href="https://tinx242.github.io/NextDrop_js/" target="_blank" class="btn-secondary">
+                        <ion-icon name="globe-outline"></ion-icon>
+                        Voir le site
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="context">
+            <h3>🎯 Contexte du projet</h3>
+            <p>
+                NextDrop est une plateforme web rétro-futuriste dédiée aux prochaines sorties de jeux vidéo,
+                développée en HTML, CSS et JavaScript. Inspiré d'un univers néon cyberpunk, le projet combine
+                une interface fluide, des animations rétro et une expérience utilisateur immersive. Les données
+                sont récupérées dynamiquement via une API externe, permettant d'afficher les nouveaux jeux à venir
+                sur PlayStation, Xbox, Nintendo et PC. Ce projet est né d'une passion pour le design futuriste,
+                la culture gaming et l'envie de créer un outil simple mais visuellement marquant.
+            </p>
+        </section>
+
+        <section class="resources">
+            <h3>🎓 Objectifs pédagogiques</h3>
+            <ul>
+                <li><strong style="color: #BAFF39;">Fetch API</strong> : Consommer une API externe pour récupérer les données de jeux en temps réel</li>
+                <li><strong style="color: #BAFF39;">JavaScript asynchrone</strong> : Maîtriser async/await et la gestion des promesses</li>
+                <li><strong style="color: #BAFF39;">Manipulation du DOM</strong> : Générer dynamiquement les fiches de jeux depuis les données API</li>
+                <li><strong style="color: #BAFF39;">Design rétro-futuriste</strong> : Créer une esthétique néon cyberpunk cohérente avec CSS</li>
+                <li><strong style="color: #BAFF39;">Filtrage multi-plateformes</strong> : Trier les jeux par plateforme (PS, Xbox, Nintendo, PC)</li>
+                <li><strong style="color: #BAFF39;">Responsive design</strong> : Adapter l'interface à tous les formats d'écran</li>
+            </ul>
+        </section>
+
+        <section class="achievements">
+            <h3>✨ Fonctionnalités principales</h3>
+
+            <div class="achievement-item">
+                <h4>1. Récupération des données via API</h4>
+                <p>
+                    Les données des prochaines sorties de jeux sont récupérées dynamiquement depuis une API externe
+                    à l'aide de fetch et async/await. Chaque fiche de jeu (titre, plateforme, date de sortie, image)
+                    est générée automatiquement dans le DOM à partir de la réponse JSON de l'API.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>2. Filtrage par plateforme</h4>
+                <p>
+                    Les joueurs peuvent filtrer les prochaines sorties par plateforme : PlayStation, Xbox, Nintendo et PC.
+                    Le filtrage s'effectue côté client en JavaScript, sans rechargement de page, pour une navigation fluide.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>3. Interface rétro-futuriste néon</h4>
+                <p>
+                    L'ensemble de l'interface est conçu dans un univers cyberpunk : effets de lueur néon,
+                    animations rétro, typographies stylisées et palette de couleurs sombre et contrastée
+                    pour une immersion totale dans l'univers gaming.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>4. Fiches de jeux dynamiques</h4>
+                <p>
+                    Chaque jeu est présenté sous forme de carte avec son image, son titre, sa plateforme et
+                    sa date de sortie. Les cartes sont générées entièrement en JavaScript depuis les données
+                    retournées par l'API.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>5. Responsive et accessible</h4>
+                <p>
+                    La plateforme s'adapte à tous les formats d'écran (mobile, tablette, desktop) grâce à un
+                    design responsive soigné. Une attention particulière a été portée à la lisibilité et
+                    à la navigation sur tous les supports.
+                </p>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <h3>📸 Captures d'écran</h3>
+            <div class="screenshot-grid">
+                <div class="screenshot-item">
+                    <img src="../asset/nextDrop menu.JPG" alt="Page d'accueil NextDrop" onerror="this.style.display='none'">
+                    <p>Page d'accueil</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="../asset/nextdropjeu.JPG" alt="Filtrage par plateforme" onerror="this.style.display='none'">
+                    <p>Description de jeu</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="../asset/NextDropcode.JPG " alt="Appel API en JavaScript" onerror="this.style.display='none'">
+                    <p>Appel API en JavaScript</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="database">
+            <h3>🗄️ Architecture de l'application</h3>
+            <div class="mcd-container">
+                <div class="mcd-description">
+                    <h4>Structure du projet :</h4>
+                    <ul>
+                        <li><strong style="color: #BAFF39;">index.html</strong> : Page principale listant les prochaines sorties</li>
+                        <li><strong style="color: #BAFF39;">api.js</strong> : Module de récupération et traitement des données API</li>
+                        <li><strong style="color: #BAFF39;">filter.js</strong> : Logique de filtrage par plateforme côté client</li>
+                        <li><strong style="color: #BAFF39;">style.css</strong> : Thème rétro-futuriste, effets néon et responsive design</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="technologies">
+            <h3>🛠️ Stack technique</h3>
+            <div class="tech-list">
+                <div class="tech-item">
+                    <img src="../asset/html5.svg" alt="HTML5">
+                    <h4>HTML5</h4>
+                    <p>Structure sémantique de la plateforme et injection dynamique des fiches de jeux</p>
+                </div>
+                <div class="tech-item">
+                    <img src="../asset/css3.svg" alt="CSS3" onerror="this.style.display='none'">
+                    <h4>CSS3</h4>
+                    <p>Esthétique cyberpunk, effets néon, animations rétro et responsive design</p>
+                </div>
+                <div class="tech-item">
+                    <img src="../asset/javascript.svg" alt="JavaScript" onerror="this.style.display='none'">
+                    <h4>JavaScript</h4>
+                    <p>Appels API asynchrones (fetch/async/await), manipulation du DOM et filtrage dynamique</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenges">
+            <h3>🚀 Défis relevés</h3>
+            <ul>
+                <li>Consommation d'une API externe et gestion des erreurs de chargement</li>
+                <li>Génération dynamique des fiches de jeux depuis une réponse JSON</li>
+                <li>Implémentation d'un filtrage multi-plateformes fluide côté client</li>
+                <li>Création d'une esthétique néon cyberpunk cohérente et immersive</li>
+                <li>Collaboration en binôme avec répartition des tâches (design & JavaScript)</li>
+                <li>Adaptation responsive de l'interface sur tous les formats d'écran</li>
+            </ul>
+        </section>
+
+        <section class="team">
+            <h3>👥 Équipe</h3>
+            <div class="tech-list">
+                <div class="tech-item">
+                    <ion-icon name="person-outline" style="font-size: 2.5rem; color: #BAFF39;"></ion-icon>
+                    <h4>Likouanga Clotaire Marthin</h4>
+                    <p>Développement & Design</p>
+                    <p>
+                        <a href="mailto:marthin.likouanga@gmail.com" style="color: #BAFF39;">marthin.likouanga@gmail.com</a>
+                    </p>
+                </div>
+                <div class="tech-item">
+                    <ion-icon name="person-outline" style="font-size: 2.5rem; color: #BAFF39;"></ion-icon>
+                    <h4>Gloire Bryan Boungou Mbimi</h4>
+                    <p>Intégration & JavaScript</p>
+                    <p>
+                        <a href="mailto:boungoubryan@icloud.com" style="color: #BAFF39;">boungoubryan@icloud.com</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-navigation">
+            <a href="../projet_perso.html" class="btn-back">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                Retour aux projets
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; - Portfolio <time datetime="2025">2025</time></p>
+    </footer>
+
+    <script type="module" src="../js/dark-mode.js"></script>
+    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

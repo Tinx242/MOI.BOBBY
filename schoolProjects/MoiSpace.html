@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détails du projet MOI.SPACE - Jeu inspiré de Space Invaders">
+    <title>Projet MOI.SPACE - Moi.Bobby</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="../css/schoolProjects.css">
+</head>
+
+<body>
+    <header>
+        <h1>MOI.BOBBY</h1>
+        
+        <button class="toggle-dark-mode" aria-label="Changer le mode sombre/clair">
+            <ion-icon id="theme-logo" name="moon" aria-hidden="true"></ion-icon>
+        </button>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../apropos.html">A PROPOS</a></li>
+                <li><a href="../blog.html">BLOG</a></li>
+                <li><a href="../contacts.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <div class="file">
+            <a href="../index.html">Accueil</a> / 
+            <a href="../projet_perso.html">Projet_perso</a> / 
+            <span>MOI.SPACE</span>
+        </div>
+
+        <section class="hero-project">
+            <img src="../asset/moispace.jpg" alt="Projet MOI.SPACE" class="hero-img">
+            <div class="hero-info">
+                <h2>MOI.SPACE - Jeu Space Invaders</h2>
+                <div class="tech-stack">
+                    <img src="../asset/html5.svg" alt="HTML5" title="HTML5">
+                    <img src="../asset/css.svg" alt="CSS3" title="CSS3">
+                    <img src="../asset/javascript.svg" alt="JavaScript" title="JavaScript">
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Tinx242/MOI.SPACE" target="_blank" class="btn-primary">
+                        <ion-icon name="logo-github"></ion-icon>
+                        Code Source
+                    </a>
+                    <a href="https://tinx242.github.io/MOI.SPACE/" target="_blank" class="btn-secondary">
+                        <ion-icon name="globe-outline"></ion-icon>
+                        Jouer
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="context">
+            <h3>🎯 Contexte du projet</h3>
+            <p>
+                MOI.SPACE est un jeu web inspiré de Space Invaders, développé entièrement en HTML, CSS et JavaScript.
+                En tant que développeur passionné de jeux vidéo classiques, j'ai conçu ce jeu pour offrir une
+                expérience nostalgique alliant gameplay rétro et graphismes modernes. Le joueur affronte des vagues
+                d'envahisseurs spatiaux et accumule des points au fil des niveaux. Ce projet explore les mécaniques
+                de jeu côté navigateur : boucle de jeu, gestion des collisions, animations canvas et contrôles clavier.
+            </p>
+        </section>
+
+        <section class="resources">
+            <h3>🎓 Objectifs pédagogiques</h3>
+            <ul>
+                <li><strong style="color: #BAFF39;">Canvas HTML5</strong> : Dessiner et animer les éléments du jeu dans un canvas</li>
+                <li><strong style="color: #BAFF39;">Boucle de jeu</strong> : Implémenter une game loop avec requestAnimationFrame</li>
+                <li><strong style="color: #BAFF39;">Gestion des collisions</strong> : Détecter les impacts entre tirs et ennemis</li>
+                <li><strong style="color: #BAFF39;">Contrôles clavier</strong> : Gérer les événements keyboard pour déplacer le vaisseau</li>
+                <li><strong style="color: #BAFF39;">Système de score</strong> : Compter et afficher les points en temps réel</li>
+                <li><strong style="color: #BAFF39;">JavaScript orienté objet</strong> : Structurer le jeu avec des classes (Joueur, Ennemis, Tirs)</li>
+            </ul>
+        </section>
+
+        <section class="achievements">
+            <h3>✨ Fonctionnalités principales</h3>
+
+            <div class="achievement-item">
+                <h4>1. Gameplay classique Space Invaders</h4>
+                <p>
+                    Le joueur contrôle un vaisseau spatial se déplaçant horizontalement et doit abattre
+                    des vagues d'envahisseurs qui descendent progressivement vers lui. Le rythme s'accélère
+                    au fil de la partie pour un défi croissant.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>2. Système de tir</h4>
+                <p>
+                    Le joueur peut tirer des projectiles vers les envahisseurs à l'aide du clavier.
+                    La détection de collisions est gérée en JavaScript pour identifier les impacts
+                    et mettre à jour le score en conséquence.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>3. Compteur de score</h4>
+                <p>
+                    Chaque ennemi abattu rapporte des points affichés en temps réel à l'écran.
+                    Le score s'incrémente dynamiquement tout au long de la partie pour encourager
+                    le joueur à battre ses records.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>4. Interface intuitive</h4>
+                <p>
+                    L'interface est simple et épurée, pensée pour une prise en main immédiate.
+                    Les contrôles clavier sont accessibles et la lisibilité des éléments à l'écran
+                    est soignée pour une expérience de jeu fluide.
+                </p>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <h3>📸 Captures d'écran</h3>
+            <div class="screenshot-grid">
+                <div class="screenshot-item">
+                    <img src="../asset/MoiSpacemenu.JPG" alt="Écran de jeu principal" onerror="this.style.display='none'">
+                    <p>Écran de jeu</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="../asset/MoiSpacejeu.JPG" alt="Affichage du score" onerror="this.style.display='none'">
+                    <p>Système de score</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="../asset/MoiSpacecode.JPG" alt="Code de la boucle de jeu" onerror="this.style.display='none'">
+                    <p>Boucle de jeu</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="database">
+            <h3>🗄️ Architecture de l'application</h3>
+            <div class="mcd-container">
+                <div class="mcd-description">
+                    <h4>Structure du projet :</h4>
+                    <ul>
+                        <li><strong style="color: #BAFF39;">index.html</strong> : Page principale contenant le canvas du jeu</li>
+                        <li><strong style="color: #BAFF39;">game.js</strong> : Boucle de jeu principale et gestion des états</li>
+                        <li><strong style="color: #BAFF39;">player.js</strong> : Classe joueur, déplacements et tirs</li>
+                        <li><strong style="color: #BAFF39;">enemies.js</strong> : Gestion des vagues d'envahisseurs et collisions</li>
+                        <li><strong style="color: #BAFF39;">style.css</strong> : Mise en forme de l'interface et du canvas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="technologies">
+            <h3>🛠️ Stack technique</h3>
+            <div class="tech-list">
+                <div class="tech-item">
+                    <img src="../asset/html5.svg" alt="HTML5">
+                    <h4>HTML5</h4>
+                    <p>Structure de la page et élément Canvas pour le rendu graphique du jeu</p>
+                </div>
+                <div class="tech-item">
+                    <img src="../asset/css.svg" alt="CSS3" onerror="this.style.display='none'">
+                    <h4>CSS3</h4>
+                    <p>Mise en forme de l'interface, fond spatial et lisibilité des éléments de jeu</p>
+                </div>
+                <div class="tech-item">
+                    <img src="../asset/javascript.svg" alt="JavaScript" onerror="this.style.display='none'">
+                    <h4>JavaScript</h4>
+                    <p>Boucle de jeu, gestion des collisions, contrôles clavier et système de score</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenges">
+            <h3>🚀 Défis relevés</h3>
+            <ul>
+                <li>Implémentation d'une boucle de jeu fluide avec requestAnimationFrame</li>
+                <li>Gestion des collisions entre projectiles et envahisseurs</li>
+                <li>Animation des déplacements ennemis avec accélération progressive</li>
+                <li>Contrôles clavier réactifs sans latence perceptible</li>
+                <li>Affichage du score en temps réel sur le canvas</li>
+                <li>Structuration du code en classes JavaScript pour une meilleure maintenabilité</li>
+            </ul>
+        </section>
+
+        <div class="back-navigation">
+            <a href="../projet_perso.html" class="btn-back">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                Retour aux projets
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; - Portfolio <time datetime="2025">2025</time></p>
+    </footer>
+
+    <script type="module" src="../js/dark-mode.js"></script>
+    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

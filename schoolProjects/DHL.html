@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détails du projet DHL - Gestionnaire de commandes en ligne de commande Java">
+    <title>Projet DHL - Moi.Bobby</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="../css/schoolProjects.css">
+</head>
+
+<body>
+    <header>
+        <h1>MOI.BOBBY</h1>
+        
+        <button class="toggle-dark-mode" aria-label="Changer le mode sombre/clair">
+            <ion-icon id="theme-logo" name="moon" aria-hidden="true"></ion-icon>
+        </button>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../apropos.html">A PROPOS</a></li>
+                <li><a href="../blog.html">BLOG</a></li>
+                <li><a href="../contacts.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <div class="file">
+            <a href="../index.html">Accueil</a> / 
+            <a href="../développement.html">Développement</a> / 
+            <span>DHL</span>
+        </div>
+
+        <section class="hero-project">
+            <img src="../asset/DHL.svg" alt="Projet DHL" class="hero-img">
+            <div class="hero-info">
+                <h2>DHL - Gestionnaire de commandes CLI</h2>
+                <div class="tech-stack">
+                    <img src="../asset/java.svg" alt="Java" title="Java">
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Tinx242/DHL" target="_blank" class="btn-primary">
+                        <ion-icon name="logo-github"></ion-icon>
+                        Code Source
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="context">
+            <h3>🎯 Contexte du projet</h3>
+            <p>
+                DHL est un gestionnaire de commandes développé en Java, entièrement opérable en ligne de commande (CLI).
+                Réalisé dans un contexte pédagogique, ce projet permet d'explorer les fondamentaux de la programmation
+                orientée objet en Java : structuration du code en modules, gestion des entrées utilisateur,
+                manipulation de données et organisation d'un projet Java avec le système de modules introduit par Java 9.
+                Il simule les fonctionnalités essentielles d'un système de gestion de commandes inspiré de la logistique.
+            </p>
+        </section>
+
+        <section class="resources">
+            <h3>🎓 Objectifs pédagogiques</h3>
+            <ul>
+                <li><strong style="color: #BAFF39;">Java POO</strong> : Appliquer les principes de la programmation orientée objet (classes, héritage, encapsulation)</li>
+                <li><strong style="color: #BAFF39;">Système de modules Java</strong> : Structurer le projet avec le système de modules introduit en Java 9 (module-info.java)</li>
+                <li><strong style="color: #BAFF39;">Interface CLI</strong> : Concevoir une interaction utilisateur fluide en ligne de commande</li>
+                <li><strong style="color: #BAFF39;">Gestion des données</strong> : Créer, lire, modifier et supprimer des commandes (CRUD)</li>
+                <li><strong style="color: #BAFF39;">Gestion des exceptions</strong> : Anticiper et traiter les erreurs de saisie et d'exécution</li>
+                <li><strong style="color: #BAFF39;">Architecture logicielle</strong> : Organiser le code en packages et modules cohérents</li>
+            </ul>
+        </section>
+
+        <section class="achievements">
+            <h3>✨ Fonctionnalités principales</h3>
+
+            <div class="achievement-item">
+                <h4>1. Gestion des commandes (CRUD)</h4>
+                <p>
+                    L'application permet de créer, consulter, modifier et supprimer des commandes
+                    directement depuis le terminal. Chaque commande est identifiée par un identifiant
+                    unique et contient les informations relatives à la livraison.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>2. Interface en ligne de commande</h4>
+                <p>
+                    L'utilisateur interagit avec l'application via un menu CLI interactif.
+                    Les instructions sont saisies au clavier et les résultats s'affichent
+                    directement dans le terminal de manière claire et structurée.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>3. Système de modules Java</h4>
+                <p>
+                    Le projet est organisé avec le système de modules Java (JPMS), structuré
+                    autour d'un fichier <code>module-info.java</code> qui définit les dépendances
+                    et les exports du module DHL, favorisant la modularité et la maintenabilité du code.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>4. Gestion des erreurs</h4>
+                <p>
+                    Des mécanismes de gestion des exceptions sont mis en place pour traiter
+                    les saisies invalides et les erreurs d'exécution, garantissant une
+                    application robuste et stable même en cas d'entrées inattendues.
+                </p>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <h3>📸 Captures d'écran</h3>
+            <div class="screenshot-grid">
+                <div class="screenshot-item">
+                    <img src="../asset/DHLcli.JPG" alt="Menu principal CLI" onerror="this.style.display='none'">
+                    <p>Menu principal CLI</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="../asset/DHLmenu.JPG" alt="Gestion des commandes" onerror="this.style.display='none'">
+                    <p>Gestion des commandes</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="../asset/DHLcode.JPG" alt="Extrait du code Java" onerror="this.style.display='none'">
+                    <p>Extrait du code Java</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="database">
+            <h3>🗄️ Architecture de l'application</h3>
+            <div class="mcd-container">
+                <div class="mcd-description">
+                    <h4>Structure du projet :</h4>
+                    <ul>
+                        <li><strong style="color: #BAFF39;">module-info.java</strong> : Définition du module Java DHL et de ses dépendances</li>
+                        <li><strong style="color: #BAFF39;">Main.java</strong> : Point d'entrée de l'application et boucle principale du menu CLI</li>
+                        <li><strong style="color: #BAFF39;">Commande.java</strong> : Classe modèle représentant une commande avec ses attributs</li>
+                        <li><strong style="color: #BAFF39;">GestionnaireCommandes.java</strong> : Logique métier pour le CRUD des commandes</li>
+                        <li><strong style="color: #BAFF39;">Affichage.java</strong> : Gestion de l'affichage et des interactions dans le terminal</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="technologies">
+            <h3>🛠️ Stack technique</h3>
+            <div class="tech-list">
+                <div class="tech-item">
+                    <img src="../asset/java.svg" alt="Java">
+                    <h4>Java</h4>
+                    <p>Langage principal du projet, utilisé pour la logique métier, la POO et la gestion du CLI</p>
+                </div>
+                <div class="tech-item">
+                    <ion-icon name="terminal-outline" style="font-size: 2.5rem; color: #BAFF39;"></ion-icon>
+                    <h4>CLI (Ligne de commande)</h4>
+                    <p>Interface utilisateur entièrement opérée depuis le terminal via des entrées clavier</p>
+                </div>
+                <div class="tech-item">
+                    <ion-icon name="cube-outline" style="font-size: 2.5rem; color: #BAFF39;"></ion-icon>
+                    <h4>Java Modules (JPMS)</h4>
+                    <p>Système de modules Java 9+ pour une architecture modulaire et des dépendances explicites</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenges">
+            <h3>🚀 Défis relevés</h3>
+            <ul>
+                <li>Structuration d'un projet Java avec le système de modules (JPMS)</li>
+                <li>Conception d'une interface CLI claire et ergonomique sans interface graphique</li>
+                <li>Implémentation d'un CRUD complet pour la gestion des commandes</li>
+                <li>Gestion robuste des exceptions et des saisies utilisateur invalides</li>
+                <li>Organisation du code en packages et classes respectant les principes de la POO</li>
+                <li>Maintien d'une architecture modulaire et maintenable sur l'ensemble du projet</li>
+            </ul>
+        </section>
+
+        <div class="back-navigation">
+            <a href="../développement.html" class="btn-back">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                Retour aux projets
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; - Portfolio <time datetime="2025">2025</time></p>
+    </footer>
+
+    <script type="module" src="../js/dark-mode.js"></script>
+    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
