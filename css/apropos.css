@@ -91,7 +91,6 @@ header nav ul li:hover a {
     box-shadow: 0.2rem 0.2rem 0 black;
 }
 
-/* ==================== MAIN CONTAINER ==================== */
 main {
     width: 90%;
     max-width: 140rem;
@@ -105,7 +104,6 @@ main {
     gap: 3rem;
 }
 
-/* ==================== SECTION TITLES ==================== */
 .section-title {
     font-family: 'Anton', sans-serif;
     font-size: 3rem;
@@ -125,7 +123,6 @@ main {
     font-size: 3.5rem;
 }
 
-/* ==================== CONTENT BOXES ==================== */
 .content-box {
     background: var(--bgcolor_main);
     border: 0.4rem solid var(--bgcolor_green);
@@ -134,7 +131,6 @@ main {
     border-radius: 1rem;
 }
 
-/* ==================== PROFILE SECTION ==================== */
 .profile-section {
     display: flex;
     justify-content: center;
@@ -218,7 +214,7 @@ main {
     margin-top: 1rem;
 }
 
-/* ==================== PRESENTATION SECTION ==================== */
+/* Présentation*/
 .presentation-section {
 }
 
@@ -254,7 +250,6 @@ main {
     line-height: 1.6;
 }
 
-/* ==================== SKILLS SECTION ==================== */
 .skills-section {
 }
 
@@ -296,10 +291,6 @@ main {
     font-size: 1.4rem;
     color: var(--text-color);
     line-height: 1.6;
-}
-
-/* ==================== EXPERIENCE SECTION ==================== */
-.experience-section {
 }
 
 /* Liste verticale des stages */
@@ -416,9 +407,68 @@ main {
     color: var(--text-color);
 }
 
+/*Stages*/
+.stage-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.tab-btn {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    background: var(--bgcolor_main);
+    border: 0.2rem solid var(--bgcolor_green);
+    box-shadow: 0.3rem 0.3rem 0 black;
+    padding: 0.6rem 1.4rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tab-btn:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0.5rem 0.5rem 0 black;
+    background: var(--bgcolor_green);
+    color: var(--bgcolor_main);
+}
+
+.btn-stage-pdf {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--bgcolor_main);
+    background: var(--bgcolor_green);
+    border: 0.25rem solid black;
+    box-shadow: 0.35rem 0.35rem 0 black;
+    padding: 0.6rem 1.6rem;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-stage-pdf:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0.55rem 0.55rem 0 black;
+    background: var(--bgcolor_pink);
+    color: var(--text-color);
+}
+
+.btn-stage-pdf:active {
+    transform: translateY(0.1rem);
+    box-shadow: 0.15rem 0.15rem 0 black;
+}
 
 
-/* ==================== PASSIONS SECTION ==================== */
+
+/*Passions*/
 .passions-section {
 }
 
@@ -463,7 +513,7 @@ main {
     line-height: 1.6;
 }
 
-/* ==================== TABLEAU DE SYNTHÈSE SECTION ==================== */
+/* TB SYNTHESE */
 .tableau-preview-wrapper {
     border: 0.4rem solid var(--bgcolor_green);
     box-shadow: 0.8rem 0.8rem 0 black;
@@ -539,38 +589,24 @@ main {
     }
 }
 
-/* ==================== FOOTER ==================== */
 footer {
-    text-align: center;
-    padding: 2rem;
-    margin: 4rem auto 2rem;
-    background-color: var(--bgcolor_main);
-    color: var(--text-color);
-    font-family: 'Space Mono', monospace;
-    width: fit-content;
-    border: 0.3rem solid var(--bgcolor_green);
-    box-shadow: 0.5rem 0.5rem 0 black;
-    position: relative;
-    border-radius: 1rem;
-}
+            text-align: center;
+            padding: 2rem;
+            margin: 4rem auto 2rem;
+            background-color: var(--bgcolor_main);
+            color: var(--text-color);
+            font-family: 'Space Mono', monospace;
+            width: fit-content;
+            border: 0.3rem solid var(--bgcolor_green);
+            box-shadow: 0.5rem 0.5rem 0 black;
+            position: relative;
+            border-radius: 1rem;
+        }
 
-footer p {
-    font-size: 1.6rem;
-}
-
-/* ==================== ANIMATIONS ==================== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(3rem);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ==================== RESPONSIVE ==================== */
+        footer p {
+            font-size: 1.6rem;
+        }
+/* RESPONSIVE*/
 @media screen and (max-width: 1000px) {
     header {
         flex-direction: column;

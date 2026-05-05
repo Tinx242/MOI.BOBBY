@@ -50,5 +50,7 @@ function tabs(){
             toggle(link.dataset.target);
         }
     })
+
+    
 }
 tabs();

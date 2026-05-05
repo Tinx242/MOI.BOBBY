@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Veille Technologique</title>
+    <title>Veille Technologique – Web Scraping</title>
     <link rel="stylesheet" href="./css/blog.css">
-    <link rel="styalesheet" href="./css/dark-mode.css">
+    <link rel="stylesheet" href="./css/dark-mode.css">
 </head>
 <body>
-    <header>
+
+    <header> 
         <h1>MOI.BOBBY</h1>
         <button class="toggle-dark-mode" aria-label="Changer le mode sombre/clair">
-                    <ion-icon id="theme-logo" name="moon" aria-hidden="true"></ion-icon>
-                </button>
+            <ion-icon id="theme-logo" name="moon" aria-hidden="true"></ion-icon>
+        </button>
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
@@ -23,196 +24,399 @@
         </nav>
     </header>
 
-    <!-- CARROUSEL -->
-    <div class="carousel-container">
-        <div class="carousel-wrapper">
-            <div class="carousel-slide active">
-                <img src="./asset/f1-active-aero.jpg" alt="Voiture F1 en soufflerie" class="carousel-image">
-                <div class="carousel-caption">
-                    <h2>🏎️ Intelligence Artificielle en Soufflerie</h2>
-                    <p>Ma veille technologique explore comment l'IA révolutionne les tests aérodynamiques en Formule 1. Les algorithmes d'apprentissage automatique permettent d'optimiser les performances des monoplaces en réduisant considérablement les temps de développement.</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="./asset/F1.jpg" alt="Simulation CFD F1" class="carousel-image">
-                <div class="carousel-caption">
-                    <h2>💨 Simulation CFD et Machine Learning</h2>
-                    <p>La combinaison de la dynamique des fluides numérique (CFD) avec le machine learning permet aux écuries de tester virtuellement des milliers de configurations aérodynamiques avant même de fabriquer un prototype physique.</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="./asset/F1_2026.jpg" alt="Données F1 en temps réel" class="carousel-image">
-                <div class="carousel-caption">
-                    <h2>📊 Analyse Prédictive des Performances</h2>
-                    <p>Les réseaux de neurones analysent en temps réel les données collectées lors des essais pour prédire le comportement aérodynamique des voitures dans différentes conditions de course, offrant un avantage compétitif majeur.</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="./asset/aero f1.avif" alt="Technologie F1 future" class="carousel-image">
-                <div class="carousel-caption">
-                    <h2>🚀 Le Futur : Jumeaux Numériques IA</h2>
-                    <p>Vers 2026, les écuries développent des jumeaux numériques complets de leurs voitures, alimentés par l'IA, permettant de tester virtuellement chaque modification avant la fabrication, transformant radicalement le processus de développement.</p>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-controls">
-            <button class="carousel-btn prev" onclick="changeSlide(-1)">‹</button>
-            <button class="carousel-btn next" onclick="changeSlide(1)">›</button>
-        </div>
-        <div class="carousel-indicators">
-            <span class="indicator active" onclick="goToSlide(0)"></span>
-            <span class="indicator" onclick="goToSlide(1)"></span>
-            <span class="indicator" onclick="goToSlide(2)"></span>
-            <span class="indicator" onclick="goToSlide(3)"></span>
+    <div class="page-hero">
+        <h2>🕸️ Veille Technologique — Web Scraping</h2>
+        <p><strong>BTS SIO SLAM</strong> · Sujet de veille : <strong>Web Scraping avec Python – Techniques & Éthique</strong></p>
+        <p>La collecte automatisée de données est au cœur de la data science, de l'analyse de marché et de la veille concurrentielle. Cette page synthétise ma veille : méthodes de surveillance, actualités juridiques, outils Python et enjeux éthiques.</p>
+        <p class="hero-problematique">
+            <strong>Problématique :</strong> Comment les nouvelles technologies facilitent-elles le web scraping tout en respectant les contraintes légales et éthiques ?
+        </p>
+        <div class="pill-list">
+            <span class="pill">Python</span>
+            <span class="pill">BeautifulSoup</span>
+            <span class="pill">Scrapy</span>
+            <span class="pill">Selenium</span>
+            <span class="pill">Playwright</span>
+            <span class="pill">Pandas</span>
+            <span class="pill pink">RGPD</span>
+            <span class="pill pink">Éthique</span>
+            <span class="pill pink">Légalité</span>
         </div>
     </div>
-    
 
-    <div class="container">
-        <section class="hero">
-            <h2>🚀 Bienvenue sur mon blog tech</h2>
-            <p>
-                Passionné de <strong style="color: #EF036C;">Formule 1</strong> et de <strong style="color: #BAFF39;">technologies innovantes</strong>, 
-                je documente ici ma veille technologique sur l'utilisation de l'intelligence artificielle dans les souffleries de développement des voitures de F1.
-            </p>
-            <p>
-                La F1 est à la pointe de l'innovation, et l'IA révolutionne la façon dont les écuries développent l'aérodynamisme de leurs monoplaces. 
-                Découvrez comment les algorithmes d'apprentissage automatique optimisent les tests en soufflerie et réduisent les temps de développement.
-            </p>
-        </section>
+    <div class="tabs-nav">
+        <button class="tab-btn active" onclick="switchTab('methode')">🔄 Méthode de veille</button>
+        <button class="tab-btn" onclick="switchTab('actu')">⚖️ Actualités clés</button>
+        <button class="tab-btn" onclick="switchTab('outils')">🛠️ Outils Python</button>
+        <button class="tab-btn" onclick="switchTab('ethique')">🚨 Éthique & Limites</button>
+        <button class="tab-btn" onclick="switchTab('synthese')">💡 Synthèse</button>
+    </div>
 
-        <div class="articles-grid">
-            <article class="article-card">
-                <span class="article-tag">IA & AÉRO</span>
-                <h3>L'IA transforme les souffleries F1</h3>
-                <span class="date">📅 25 Novembre 2025</span>
-                <p>
-                    Les écuries de F1 utilisent désormais des réseaux de neurones pour prédire les performances aérodynamiques, 
-                    réduisant de 40% le temps passé en soufflerie physique. Une révolution qui change la donne.
-                </p>
-                <a href="#" class="read-more">LIRE L'ARTICLE →</a>
-            </article>
+    <div class="content-area">
 
-            <article class="article-card">
-                <span class="article-tag">MACHINE LEARNING</span>
-                <h3>CFD + IA : Le duo gagnant</h3>
-                <span class="date">📅 20 Novembre 2025</span>
-                <p>
-                    La combinaison de la simulation CFD (Computational Fluid Dynamics) et de l'apprentissage automatique 
-                    permet d'obtenir des résultats 10 fois plus rapidement qu'avec les méthodes traditionnelles.
-                </p>
-                <a href="#" class="read-more">LIRE L'ARTICLE →</a>
-            </article>
+        <!-- ONGLET 1 : MÉTHODE -->
+        <div class="tab-panel active" id="panel-methode">
+            <h2 class="section-title">🔄 Comment s'actualiser efficacement</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <span class="card-tag">📡 Google Alerts</span>
+                    <h3>Alertes automatiques</h3>
+                    <p>Configurer des alertes Google pour recevoir les dernières actualités directement par e-mail :</p>
+                    <ul>
+                        <li><code>web scraping Python</code></li>
+                        <li><code>BeautifulSoup update</code></li>
+                        <li><code>Scrapy news</code></li>
+                        <li><code>scraping data ethics</code></li>
+                        <li><code>data extraction regulation</code></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="card-tag">📰 Feedly</span>
+                    <h3>Agrégateur de flux RSS</h3>
+                    <p>Centraliser ses sources dans Feedly pour une lecture quotidienne efficace :</p>
+                    <ul>
+                        <li>Stack Overflow — Questions taggées <em>python web-scraping</em></li>
+                        <li>GitHub Trending — Repos scraping Python</li>
+                        <li>Reddit <strong>r/webscraping</strong></li>
+                        <li>Towards Data Science (Medium)</li>
+                        <li>Real Python — Tutoriels pratiques</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="card-tag">💼 LinkedIn</span>
+                    <h3>Veille professionnelle</h3>
+                    <p>LinkedIn est particulièrement utile pour les aspects éthiques et réglementaires :</p>
+                    <ul>
+                        <li>Sujets : <em>Data privacy</em>, <em>RGPD</em>, <em>Legal tech</em></li>
+                        <li>Profils à suivre : DPO, juristes spécialisés données</li>
+                        <li>Articles de fond sur la régulation du scraping</li>
+                        <li>Actualités des grandes décisions de justice</li>
+                    </ul>
+                </div>
+                <div class="card card--green">
+                    <span class="card-tag card-tag--dark">🔬 Documentation officielle</span>
+                    <h3>Sources primaires</h3>
+                    <p>Indispensables pour les évolutions techniques Python :</p>
+                    <ul>
+                        <li>docs.python.org — Officiel Python</li>
+                        <li>beautiful-soup-4.readthedocs.io</li>
+                        <li>docs.scrapy.org — Release notes Scrapy</li>
+                        <li>selenium-python.readthedocs.io</li>
+                        <li>CNIL.fr — Actualités RGPD France</li>
+                    </ul>
+                </div>
+            </div>
 
-            <article class="article-card">
-                <span class="article-tag">INNOVATION</span>
-                <h3>Red Bull et l'IA générative</h3>
-                <span class="date">📅 15 Novembre 2025</span>
-                <p>
-                    Red Bull Racing utilise des algorithmes génératifs pour créer des milliers de variations d'aileron, 
-                    testées virtuellement avant validation en soufflerie. Une approche qui a contribué à leur domination.
-                </p>
-                <a href="#" class="read-more">LIRE L'ARTICLE →</a>
-            </article>
+            <h2 class="section-title proof-section-title">📸 Preuves de veille — Push / Pull</h2>
+            <div class="proof-grid">
+                <figure class="proof-card">
+                    <img src="asset/GoogleAlerts.JPG" alt="Capture Google Alerts">
+                    <figcaption><span class="proof-tag proof-tag--pull">PULL</span> Google Alerts</figcaption>
+                </figure>
+                <figure class="proof-card">
+                    <img src="asset/Feedly.JPG" alt="Capture Feedly">
+                    <figcaption><span class="proof-tag proof-tag--pull">PULL</span> Feedly</figcaption>
+                </figure>
+                <figure class="proof-card">
+                    <img src="asset/linkedin.JPG" alt="Capture LinkedIn">
+                    <figcaption><span class="proof-tag proof-tag--push">PUSH</span> LinkedIn</figcaption>
+                </figure>
+                <figure class="proof-card">
+                    <img src="asset/beautiful.JPG" alt="Capture Documentation officielle">
+                    <figcaption><span class="proof-tag proof-tag--pull">PULL</span> Docs officielles</figcaption>
+                </figure>
+                <figure class="proof-card">
+                    <img src="asset/cnil.JPG" alt="Capture CNIL">
+                    <figcaption><span class="proof-tag proof-tag--push">PUSH</span> CNIL.fr</figcaption>
+                </figure>
+            </div>
 
-            <article class="article-card">
-                <span class="article-tag">DEEP LEARNING</span>
-                <h3>Optimisation temps réel en piste</h3>
-                <span class="date">📅 10 Novembre 2025</span>
-                <p>
-                    Les données collectées lors des essais sont analysées par des modèles de deep learning qui ajustent 
-                    instantanément les paramètres aérodynamiques pour maximiser les performances en course.
-                </p>
-                <a href="#" class="read-more">LIRE L'ARTICLE →</a>
-            </article>
-
-            <article class="article-card">
-                <span class="article-tag">RÉGLEMENTATION</span>
-                <h3>Les limites imposées par la FIA</h3>
-                <span class="date">📅 5 Novembre 2025</span>
-                <p>
-                    La FIA régule l'utilisation des souffleries et de la CFD, mais l'IA ouvre de nouvelles possibilités 
-                    dans le cadre réglementaire. Analyse des zones grises et des opportunités d'innovation.
-                </p>
-                <a href="#" class="read-more">LIRE L'ARTICLE →</a>
-            </article>
-
-            <article class="article-card">
-                <span class="article-tag">FUTUR</span>
-                <h3>2026 : L'ère des jumeaux numériques</h3>
-                <span class="date">📅 1 Novembre 2025</span>
-                <p>
-                    Avec le nouveau règlement 2026, les écuries investissent massivement dans des jumeaux numériques 
-                    alimentés par l'IA pour tester virtuellement chaque modification avant la fabrication physique.
-                </p>
-                <a href="#" class="read-more">LIRE L'ARTICLE →</a>
-            </article>
         </div>
 
-        <aside class="sidebar">
-            <h3>🔍 Thématiques de veille</h3>
-            <ul>
-                <li>🤖 Algorithmes d'optimisation aérodynamique</li>
-                <li>💨 Simulation de flux d'air par IA</li>
-                <li>📊 Analyse prédictive des performances</li>
-                <li>🔬 Machine learning en soufflerie</li>
-                <li>⚡ Réduction des coûts de développement</li>
-                <li>🏆 Études de cas : Mercedes, Red Bull, Ferrari</li>
-                <li>📈 Évolution des réglementations techniques</li>
-                <li>🌐 Technologies émergentes en F1</li>
-            </ul>
-        </aside>
+        <!-- ONGLET 2 : ACTUALITÉS -->
+        <div class="tab-panel" id="panel-actu">
+            <h2 class="section-title">⚖️ Points d'actualité à surveiller</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>🔐 RGPD – Impact direct sur le scraping Python</h4>
+                    <p><span class="badge">UE · 2018</span>Le Règlement Général sur la Protection des Données interdit de collecter des données personnelles sans consentement explicite. Toute donnée permettant d'identifier une personne (nom, e-mail, photo…) est protégée. Un script Python qui collecte ces données sans base légale est en infraction.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>⚖️ HiQ Labs v. LinkedIn</h4>
+                    <p><span class="badge">USA · 2019–2022</span>Affaire majeure : HiQ scrapait des profils LinkedIn publics avec des outils Python. La cour a jugé que scraper des données <em>publiquement accessibles</em> ne viole pas le Computer Fraud and Abuse Act (CFAA). Enseignement clé : données publiques ≠ automatiquement légal — tout dépend des CGU et de l'usage.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>🤖 IA générative & données scrapées</h4>
+                    <p><span class="badge">2023–2025</span>Les grands modèles d'IA (GPT, Llama, Mistral…) ont été entraînés sur des données massivement collectées via des pipelines Python (Scrapy, BeautifulSoup…). Cela soulève des questions juridiques inédites : droits d'auteur, consentement des auteurs, rémunération.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>🇪🇺 AI Act & régulation du scraping</h4>
+                    <p><span class="badge">UE · 2024</span>L'AI Act européen impose aux fournisseurs de LLM de déclarer les données d'entraînement, y compris les données scrapées via Python. Première réglementation mondiale à adresser directement le scraping dans le contexte de l'IA.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>🔒 Anti-scraping renforcé</h4>
+                    <p><span class="badge">Tendance 2025</span>Cloudflare, DataDome, PerimeterX... Les solutions anti-bot deviennent de plus en plus sophistiquées (fingerprinting, CAPTCHA IA, honeypots). Les bibliothèques Python comme Selenium et Playwright évoluent pour contourner ces protections de manière éthique.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>🇫🇷 CNIL — Recommandations sur le scraping et les données publiques</h4>
+                    <p><span class="badge">France · 2024</span>La CNIL a publié en 2024 des recommandations précisant que même les données <em>publiquement accessibles</em> sur le web restent soumises au RGPD dès lors qu'elles permettent d'identifier une personne. Un script Python collectant des profils, adresses e-mail ou numéros de téléphone sur des pages publiques peut donc constituer une violation. La CNIL rappelle l'obligation de finalité : les données ne peuvent être réutilisées à des fins incompatibles avec leur publication originale.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>⚖️ X (ex-Twitter) vs chercheurs en scraping</h4>
+                    <p><span class="badge">USA · 2024</span>Après la restriction draconienne de son API en 2023, X (anciennement Twitter) a intenté plusieurs actions en justice contre des chercheurs et entreprises utilisant des scripts Python pour collecter des données publiques. Cette affaire illustre la tension croissante entre <em>open data</em> et monétisation des plateformes. Elle pousse la communauté Python à réfléchir à des alternatives éthiques : API officielles payantes, datasets partenaires ou archives institutionnelles.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>🤖 CNIL — Mise en demeure liée au scraping pour entraîner des IA</h4>
+                    <p><span class="badge">France · 2024–2025</span>La CNIL a engagé des procédures contre plusieurs acteurs utilisant des pipelines de scraping Python pour constituer des jeux de données d'entraînement de modèles d'IA sans base légale. La commission insiste : collecter des données personnelles pour entraîner un LLM nécessite une base juridique solide (consentement, intérêt légitime démontré). Elle a publié un guide spécifique sur l'IA et la protection des données début 2025.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>🧩 Décision Meta — CJUE et légalité du scraping de réseaux sociaux</h4>
+                    <p><span class="badge">UE · 2024</span>La Cour de Justice de l'Union Européenne a confirmé dans plusieurs arrêts que le scraping de données personnelles sur des réseaux sociaux, même accessibles publiquement, constitue un traitement au sens du RGPD. Meta a été condamné à plusieurs amendes en Europe pour ne pas avoir suffisamment protégé ses utilisateurs contre le scraping massif de leurs données. Ces décisions font jurisprudence pour tout développeur Python opérant en Europe.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>📦 Mise à jour majeure de Scrapy 2.12 et BeautifulSoup 4.13</h4>
+                    <p><span class="badge">Technique · 2024–2025</span>Scrapy a sorti la version 2.12 en 2024 avec un support amélioré de <code>asyncio</code>, une meilleure gestion des proxies rotatifs et une intégration native avec les pipelines de données modernes. BeautifulSoup 4.13 (début 2025) apporte un parser HTML plus robuste et une meilleure compatibilité avec les pages dynamiques générées côté serveur. Ces évolutions confirment la vitalité de l'écosystème Python pour le scraping.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>🌍 Digital Services Act (DSA) — Nouvelles obligations pour les plateformes</h4>
+                    <p><span class="badge">UE · 2024–2025</span>Le DSA, pleinement applicable depuis 2024, oblige les très grandes plateformes (Google, Meta, TikTok…) à fournir un accès aux données pour la recherche académique via des interfaces officielles. C'est une avancée majeure : les chercheurs n'ont plus à recourir à des scripts Python de scraping illégaux pour étudier ces plateformes. Cela réduit le besoin de scraping, mais soulève de nouvelles questions sur l'accès équitable pour les acteurs non académiques.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>🔐 CNIL — Sanctions renforcées en 2025 et contrôles sectoriels</h4>
+                    <p><span class="badge">France · 2025</span>En 2025, la CNIL a annoncé des contrôles sectoriels ciblant les acteurs du marketing digital qui utilisent des outils de collecte automatisée (Python, scrapers SaaS) pour enrichir des bases de prospection. Plusieurs entreprises françaises ont reçu des mises en demeure pour collecte de données sans consentement via scraping. La CNIL rappelle que l'utilisation de bibliothèques comme <code>requests</code> ou <code>BeautifulSoup</code> ne confère aucune immunité juridique.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>🚀 ScrapeGraphAI — L'IA révolutionne le scraping Python en 2024</h4>
+                    <p><span class="badge">Technique · 2024</span>La librairie open-source <strong>ScrapeGraphAI</strong> a connu une adoption massive en 2024 avec plus de 15 000 étoiles sur GitHub. Elle permet d'extraire des données web en langage naturel grâce aux LLMs (GPT-4, Mistral, Llama) sans écrire de sélecteurs CSS ou XPath. Un simple prompt Python suffit : <code>SmartScraperGraph("Extrais tous les prix", url, config)</code>. Cela démocratise le scraping mais pose de nouvelles questions éthiques sur l'automatisation à grande échelle.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>⚡ Playwright Python passe en v1.45 — Le standard 2025</h4>
+                    <p><span class="badge">Technique · 2025</span>Playwright pour Python a franchi la version 1.45 en 2025, consolidant sa position de référence face à Selenium. Les nouvelles fonctionnalités incluent le mode <em>stealth</em> amélioré, la gestion des WebSockets pour scraper des données en temps réel, et un enregistreur de code Python intégré (<code>codegen</code>) qui génère automatiquement les scripts de scraping en observant la navigation. Microsoft, qui maintient le projet, a annoncé une feuille de route intégrant des capacités IA pour 2026.</p>
+                </div>
+            </div>
+        </div>
 
-        <aside class="sidebar">
-            <h3>💡 Pourquoi cette veille ?</h3>
-            <ul>
-                <li>Passion pour la F1 et les technologies de pointe</li>
-                <li>Comprendre l'impact de l'IA dans le sport automobile</li>
-                <li>Suivre les innovations des écuries leaders</li>
-                <li>Anticiper les tendances futures du développement F1</li>
-            </ul>
-        </aside>
+        <!-- ONGLET 3 : OUTILS PYTHON -->
+        <div class="tab-panel" id="panel-outils">
+            <h2 class="section-title">🐍 Bibliothèques Python pour le scraping</h2>
+            <div class="two-col">
+                <div class="card">
+                    <span class="card-tag">STATIQUE</span>
+                    <h3>Requests + BeautifulSoup</h3>
+                    <p>Le duo classique Python pour les pages HTML statiques.</p>
+                    <ul>
+                        <li><code>requests.get(url)</code> — envoie la requête HTTP</li>
+                        <li>BeautifulSoup parse le HTML/XML retourné</li>
+                        <li>Sélecteurs CSS et <code>find()</code> pour cibler les éléments</li>
+                        <li>Idéal pour : e-commerce, articles, tableaux de données</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="card-tag">INDUSTRIEL</span>
+                    <h3>Scrapy Framework</h3>
+                    <p>Le framework Python de référence pour le scraping à grande échelle.</p>
+                    <ul>
+                        <li>Architecture Spiders / Pipelines / Middlewares</li>
+                        <li>Gestion asynchrone des requêtes (très rapide)</li>
+                        <li>Export JSON, CSV, XML natif</li>
+                        <li>Scrapy Cloud pour déploiement en production</li>
+                    </ul>
+                </div>
+                <div class="card card--pink">
+                    <span class="card-tag">DYNAMIQUE</span>
+                    <h3>Selenium (Python)</h3>
+                    <p>Pilote un vrai navigateur depuis Python pour les sites JavaScript-heavy.</p>
+                    <ul>
+                        <li><code>webdriver.Chrome()</code> — lance le navigateur</li>
+                        <li>Interaction avec formulaires, clics, scroll automatique</li>
+                        <li>Selenium 4 : relative locators, CDP support</li>
+                        <li>Indispensable pour les Single Page Applications (SPAs)</li>
+                    </ul>
+                </div>
+                <div class="card card--green">
+                    <span class="card-tag">MODERNE ⭐</span>
+                    <h3>Playwright (Python)</h3>
+                    <p>Alternative moderne à Selenium — plus rapide, plus stable, 100% Python.</p>
+                    <ul>
+                        <li>API asynchrone native avec <code>asyncio</code></li>
+                        <li>Interception réseau, screenshots, génération de PDF</li>
+                        <li>Mode headless ultra-fiable + stealth mode</li>
+                        <li><code>pip install playwright</code> — installation simple</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="card-tag">DATA</span>
+                    <h3>Pandas — Traitement des données</h3>
+                    <p>Indispensable en Python après la collecte pour exploiter les données.</p>
+                    <ul>
+                        <li>Chargement depuis dict, JSON, CSV, HTML</li>
+                        <li>Nettoyage : <code>dropna()</code>, <code>fillna()</code>, <code>str.strip()</code></li>
+                        <li>Agrégation : <code>groupby()</code>, <code>pivot_table()</code></li>
+                        <li>Export : <code>to_csv()</code>, <code>to_excel()</code>, <code>to_json()</code></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="card-tag">HTTP AVANCÉ</span>
+                    <h3>httpx + lxml</h3>
+                    <p>Alternatives modernes pour des scripts Python plus performants.</p>
+                    <ul>
+                        <li><code>httpx</code> — client HTTP async, compatible <code>asyncio</code></li>
+                        <li><code>lxml</code> — parsing HTML/XML ultra-rapide en Python</li>
+                        <li>Combinaison idéale pour le scraping haute performance</li>
+                        <li>Sélecteurs XPath puissants avec lxml</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card card--ia">
+                <span class="card-tag">🧠 TENDANCE IA + PYTHON</span>
+                <h3>Scraping intelligent avec Python & IA</h3>
+                <p>L'intelligence artificielle s'intègre directement dans les pipelines Python de scraping :</p>
+                <div class="pill-list">
+                    <span class="pill">ScrapeGraphAI (LLM)</span>
+                    <span class="pill">Extraction intelligente</span>
+                    <span class="pill">Nettoyage auto des données</span>
+                    <span class="pill">Parsing sémantique</span>
+                    <span class="pill">Anti-CAPTCHA Python</span>
+                </div>
+                <p class="card-ia-note">Des librairies comme <strong>ScrapeGraphAI</strong> utilisent des LLMs directement en Python pour extraire automatiquement les données pertinentes sans écrire de sélecteurs CSS.</p>
+            </div>
+        </div>
+
+        <!-- ONGLET 4 : ÉTHIQUE -->
+        <div class="tab-panel" id="panel-ethique">
+            <h2 class="section-title">🚨 Limites éthiques & bonnes pratiques</h2>
+            <table class="ethics-table">
+                <thead>
+                    <tr>
+                        <th class="good">✔️ Bon usage</th>
+                        <th class="bad">❌ Mauvais usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Veille concurrentielle (prix publics)</td><td>Vol de contenu protégé par copyright</td></tr>
+                    <tr><td>Agrégation de données publiques ouvertes</td><td>Scraping massif (surcharge des serveurs)</td></tr>
+                    <tr><td>Recherche académique avec anonymisation</td><td>Collecte de données personnelles sans consentement</td></tr>
+                    <tr><td>Archivage de pages publiques</td><td>Contournement de systèmes d'authentification</td></tr>
+                    <tr><td>Respect du robots.txt et des CGU</td><td>Revente de données sans autorisation</td></tr>
+                    <tr><td>Délais entre requêtes avec <code>time.sleep()</code></td><td>Usurpation d'identité (fake User-Agent agressif)</td></tr>
+                </tbody>
+            </table>
+            <div class="two-col">
+                <div class="card card--green">
+                    <span class="card-tag card-tag--dark">CHECKLIST PYTHON</span>
+                    <h3>Avant de lancer un script</h3>
+                    <ul>
+                        <li>✅ Vérifier le fichier <code>robots.txt</code> du site cible</li>
+                        <li>✅ Lire les Conditions Générales d'Utilisation</li>
+                        <li>✅ Les données sont-elles vraiment publiques ?</li>
+                        <li>✅ Y a-t-il une API officielle disponible ?</li>
+                        <li>✅ Les données contiennent-elles des infos personnelles (RGPD) ?</li>
+                        <li>✅ Ajouter <code>time.sleep()</code> entre les requêtes</li>
+                        <li>✅ Définir un User-Agent identifiable dans les headers</li>
+                    </ul>
+                </div>
+                <div class="card card--pink">
+                    <span class="card-tag">RGPD</span>
+                    <h3>Obligations légales (France/UE)</h3>
+                    <ul>
+                        <li>Interdiction de collecter des données personnelles sans base légale</li>
+                        <li>Obligation de transparence sur le traitement</li>
+                        <li>Droit d'opposition et de suppression (droit à l'oubli)</li>
+                        <li>Sanctions : jusqu'à 4% du CA mondial ou 20M€</li>
+                        <li>Données de mineurs → vigilance renforcée</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="card-tag">🇫🇷 CNIL</span>
+                    <h3>Commission Nationale Informatique & Libertés</h3>
+                    <p>Autorité française de contrôle de la protection des données personnelles.</p>
+                    <ul>
+                        <li>Contrôle le respect du RGPD en France</li>
+                        <li>Émet des recommandations sur le scraping de données publiques</li>
+                        <li>Peut sanctionner toute collecte illégale via un script Python</li>
+                        <li>Source de référence : <em>cnil.fr</em></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="card-tag">🇪🇺 EDPB</span>
+                    <h3>European Data Protection Board</h3>
+                    <p>Organe européen qui coordonne l'application du RGPD entre les États membres.</p>
+                    <ul>
+                        <li>Publie des lignes directrices sur le traitement des données en ligne</li>
+                        <li>Harmonise les décisions entre les autorités nationales (CNIL, etc.)</li>
+                        <li>A publié des avis spécifiques sur le scraping des réseaux sociaux</li>
+                        <li>Source de référence : <em>edpb.europa.eu</em></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ONGLET 5 : SYNTHÈSE -->
+        <div class="tab-panel" id="panel-synthese">
+            <h2 class="section-title">💡 Synthèse & Réflexion personnelle</h2>
+            <div class="quote-block">
+                <p>Python, grâce à ses bibliothèques spécialisées, facilite grandement le web scraping — mais cette puissance impose une responsabilité : respecter le cadre légal (RGPD, CGU) et adopter une démarche éthique, transparente et proportionnée.</p>
+                <cite>— Réflexion personnelle, veille BTS SIO SLAM</cite>
+            </div>
+            <div class="cards-grid">
+                <div class="card card--green">
+                    <span class="card-tag card-tag--dark">AUJOURD'HUI</span>
+                    <h3>État de l'art Python 2025</h3>
+                    <ul>
+                        <li>Python reste le langage dominant pour le scraping</li>
+                        <li>Playwright (Python) remplace progressivement Selenium</li>
+                        <li>L'IA s'intègre dans les pipelines Python (ScrapeGraphAI)</li>
+                        <li>Les défenses anti-bot deviennent très sophistiquées</li>
+                        <li>RGPD + AI Act renforcent la pression légale</li>
+                    </ul>
+                </div>
+                <div class="card card--pink">
+                    <span class="card-tag">FUTUR</span>
+                    <h3>🔮 Tendances à surveiller</h3>
+                    <ul>
+                        <li>Réglementation plus stricte en Europe et aux USA</li>
+                        <li>LLMs intégrés aux scripts Python de scraping</li>
+                        <li>API vs scraping : les plateformes monétisent leurs données</li>
+                        <li>Fédération des données : alternative au scraping sauvage</li>
+                        <li>Librairies Python anti-détection de plus en plus avancées</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="card-tag">APPORTS</span>
+                    <h3>Ce que j'ai appris</h3>
+                    <ul>
+                        <li>Maîtrise des bibliothèques Python de scraping</li>
+                        <li>Compréhension du DOM et des requêtes HTTP</li>
+                        <li>Conscience des enjeux RGPD, CNIL et EDPB</li>
+                        <li>Vision globale : technique + juridique + éthique</li>
+                        <li>Compétences directement applicables en entreprise</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="card-tag">OUVERTURE</span>
+                    <h3>API vs Scraping Python</h3>
+                    <p>Quand préférer une API au scraping ?</p>
+                    <ul>
+                        <li>✅ API disponible → toujours utiliser l'API</li>
+                        <li>✅ API plus stable, documentée et légale</li>
+                        <li>⚠️ Scraping Python si aucune API n'existe</li>
+                        <li>⚠️ Scraping si l'API est trop restrictive</li>
+                        <li>❌ Jamais pour contourner une API payante</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <footer>
         <p>&copy; - Portfolio <time datetime="2025">2025</time></p>
     </footer>
+    
     <script type="module" src="./js/dark-mode.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const indicators = document.querySelectorAll('.indicator');
-
-        function showSlide(n) {
-            slides[currentSlide].classList.remove('active');
-            indicators[currentSlide].classList.remove('active');
-            
-            currentSlide = (n + slides.length) % slides.length;
-            
-            slides[currentSlide].classList.add('active');
-            indicators[currentSlide].classList.add('active');
-        }
-
-        function changeSlide(direction) {
-            showSlide(currentSlide + direction);
-        }
-
-        function goToSlide(n) {
-            showSlide(n);
-        }
-
-        // Auto-play
-        setInterval(() => {
-            changeSlide(1);
-        }, 5000);
-    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./js/blog.js"></script>
+    
 </body>
 </html>
