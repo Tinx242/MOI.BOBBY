@@ -589,6 +589,148 @@ main {
     }
 }
 
+/* FORMATIONS */
+.formations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 0.4rem solid var(--bgcolor_green);
+    box-shadow: 0.8rem 0.8rem 0 black;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.formation-row {
+    display: grid;
+    grid-template-columns: 24rem 1fr;
+    border-bottom: 0.3rem solid var(--bgcolor_green);
+    min-height: 16rem;
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+.formation-row:last-child {
+    border-bottom: none;
+}
+
+.formation-logo-wrapper {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 0.3rem solid var(--bgcolor_green);
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.formation-img {
+    width: 100%;
+    max-width: 16rem;
+    max-height: 10rem;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.4s ease;
+    filter: none;
+}
+
+.formation-row:hover .formation-img {
+    transform: scale(1.06);
+}
+
+.formation-body {
+    background: var(--bgcolor);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.formation-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.4rem;
+}
+
+.formation-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.formation-period {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--bgcolor_green);
+    white-space: nowrap;
+}
+
+.formation-school {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.5rem;
+    color: var(--bgcolor_pink);
+    font-weight: bold;
+}
+
+.formation-desc {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+.formation-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.formation-tags span {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+    color: var(--bgcolor_main);
+    background: var(--bgcolor_pink);
+    border: 0.2rem solid black;
+    box-shadow: 0.2rem 0.2rem 0 black;
+    padding: 0.3rem 1rem;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+@media screen and (max-width: 1000px) {
+    .formation-row {
+        grid-template-columns: 1fr;
+    }
+
+    .formation-logo-wrapper {
+        width: 100%;
+        height: 12rem;
+        border-right: none;
+        border-bottom: 0.3rem solid var(--bgcolor_green);
+        padding: 1.5rem;
+    }
+
+    .formation-img {
+        max-height: 8rem;
+        max-width: 18rem;
+    }
+
+    .formation-body {
+        padding: 1.8rem;
+    }
+
+    .formation-title {
+        font-size: 1.7rem;
+    }
+}
+
 footer {
             text-align: center;
             padding: 2rem;
