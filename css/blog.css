@@ -445,9 +445,7 @@ footer {
 .tab-panel.active .timeline-item:nth-child(4) { animation-delay: .21s; }
 .tab-panel.active .timeline-item:nth-child(5) { animation-delay: .28s; }
 
-/* ══════════════════════════════════════
-   PREUVES DE VEILLE — PUSH / PULL
-══════════════════════════════════════ */
+/* PREUVES DE VEILLE — PUSH / PULL */
 
 .proof-section-title { margin-top: 4rem; }
 
@@ -497,15 +495,81 @@ footer {
 .proof-tag--push { background: var(--bgcolor_pink);  color: #fff; }
 
 
-@media screen and (max-width: 1200px) {
+
+/* LIGHTBOX*/
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    cursor: zoom-out;
+}
+
+.lightbox.open {
+    display: flex;
+    animation: fadeInUp .2s ease both;
+}
+
+.lightbox img {
+    max-width: 92vw;
+    max-height: 82vh;
+    object-fit: contain;
+    border: 0.4rem solid var(--bgcolor_green);
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius);
+    cursor: default;
+}
+
+.lightbox-caption {
+    font-family: var(--mono);
+    font-size: 1.5rem;
+    color: var(--bgcolor_green);
+    text-align: center;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    background: var(--bgcolor_pink);
+    color: #fff;
+    border: 0.3rem solid black;
+    box-shadow: 0.4rem 0.4rem 0 black;
+    font-size: 3rem;
+    line-height: 1;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.1) rotate(8deg);
+}
+
+.proof-card img {
+    cursor: zoom-in;
+}
+
     .container { grid-template-columns: 1fr; }
     .articles-grid { grid-column: 1/-1; }
     .sidebar:first-of-type,.sidebar:last-of-type { 
         grid-column: 1/-1;
          grid-row: auto; 
         }
-    .two-col { grid-template-columns: 1fr; }
-}
+   
+        .two-col { grid-template-columns: 1fr; }
 
 @media screen and (max-width: 700px) {
     header { 
