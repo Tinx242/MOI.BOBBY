@@ -250,6 +250,68 @@ main {
     line-height: 1.6;
 }
 
+/* TECHNOLOGIES */
+.technologies-section {}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    gap: 2rem;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    background: var(--bgcolor);
+    border: 0.3rem solid black;
+    box-shadow: 0.4rem 0.4rem 0 var(--bgcolor_green);
+    padding: 2.5rem 1.5rem;
+    border-radius: 0.8rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.tech-item:hover {
+    transform: translateY(-0.6rem) rotate(-1deg);
+    box-shadow: 0.7rem 0.7rem 0 var(--bgcolor_pink);
+}
+
+.tech-logo {
+    width: 6rem;
+    height: 6rem;
+    object-fit: contain;
+}
+
+.tech-name {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--bgcolor_green);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 600px) {
+    .tech-grid {
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+        gap: 1.2rem;
+    }
+    .tech-item {
+        padding: 1.5rem 1rem;
+    }
+    .tech-logo {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    .tech-name {
+        font-size: 1.1rem;
+    }
+}
+
 .skills-section {
 }
 
