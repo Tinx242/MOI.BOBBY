@@ -496,7 +496,7 @@ footer {
 
 
 
-/* LIGHTBOX*/
+/* Lightbox */
 .lightbox {
     display: none;
     position: fixed;
@@ -568,8 +568,7 @@ footer {
         grid-column: 1/-1;
          grid-row: auto; 
         }
-   
-        .two-col { grid-template-columns: 1fr; }
+
 
 @media screen and (max-width: 700px) {
     header { 
